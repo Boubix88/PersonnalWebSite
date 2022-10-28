@@ -8,18 +8,17 @@ html {
     scroll-behavior: smooth;
 }
 
-.bandeau{
-    overflow: hidden;
-    position: fixed; /*Pour garder le bandeau fixe*/
+.header{
+    position: absolute; 
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: none;
-    z-index: 100;
+    background: transparent;
+    z-index: 10;
 }
 
-.bandeau::before{
+.header::before{
     content: '';
     position: relative;
     top: 0;
@@ -28,7 +27,7 @@ html {
     height: 100%;
 }
 
-footer{
+nav{
     position: relative;
     top: 0;
     left: 0;
@@ -39,7 +38,7 @@ footer{
     text-align: center;
 }
 
-footer .logo{
+nav .logo{
     position: relative;
     font-weight: 600;
     text-decoration: none;
@@ -47,16 +46,16 @@ footer .logo{
     font-size: 2em;
 }
 
-footer .navigation{
+nav .navigation{
     position: relative; /*Pour placer les boutons horizontalement*/
     display: flex;
 }
 
-footer .navigation li{
+nav .navigation li{
     list-style: none; /*Pour ne pas afficher de point*/
 }
 
-footer .navigation li a{
+nav .navigation li a{
     display: inline-block;
     color: blanchedalmond;
     font-weight: 400;
@@ -67,10 +66,16 @@ footer .navigation li a{
     transition: 0.5s ease-in-out;
 }
 
-footer .navigation li a.active,
-footer .navigation li a:hover{
+nav .navigation li a.active,
+nav .navigation li a:hover{
     background: blanchedalmond;
     color: black;
+}
+
+nav.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 
