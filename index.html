@@ -13,50 +13,54 @@
             <nav id="bandeau">
                 <a href="#" class="logo">Boubix</a>
                 <ul id="navigation" class="navigation">
-                    <li><a href="#" class="active">Accueil</a></li>
-                    <li><a href="#jeu">Projets</a></li>
-                    <li><a href="#aPropos">A propos</a></li>
-                    <li><a href="#contacts">Contacts</a></li>
+                    <li><a href="#" id="boutonAccueil">Accueil</a></li>
+                    <li><a href="#jeu" id="boutonProjet">Projets</a></li>
+                    <li><a href="#aPropos" id="boutonAPropos">A propos</a></li>
+                    <li><a href="#contacts" id="boutonContacts">Contacts</a></li>
                 </ul>
             </nav>
         </div>
 
-        <div class="accueil reveal">
+        <div id="accueil" class="accueil">
             <div class="text-boite">
                 <h2>Accueil</h2>
                 <p>Bienvenue sur mon site personnel ou vous pourrez retrouver mes projets personnels ainsi que la possibilité de me contacter.</p>
             </div>
         </div>
 
+        <div id="projets">
+            <div id="jeu" class="jeu">
+                <div class="text-boite">
+                    <h2>Jeu 3D</h2>
+                    <p>Prison Survival, un jeu 2D donnant une illusion de 3D grace à la technique du Raycasting. Un jeu concu entierement en C, 
+                    utilisant comme librairie graphique la SDL2.</p>
+                    <a href="https://github.com/Boubix88/Projet_S3" target="_blank" class="btn"><span></span> Savoir plus</a>
+                </div>
+                <div class="imgboite">
+                    <img src="./image/jeu.png" alt="" class="imgJeu">
+                </div>
+            </div>
 
-        <div id="jeu" class="jeu">
-            <div class="text-boite">
-                <h2>Jeu 3D</h2>
-                <p>Prison Survival, un jeu 2D donnant une illusion de 3D grace à la technique du Raycasting. Un jeu concu entierement en C, 
-                   utilisant comme librairie graphique la SDL2.</p>
-                <a href="#" class="btn"><span></span> Savoir plus</a>
-            </div>
-            <div class="imgboite">
-                <img src="./image/jeu.png" alt="" class="imgJeu">
-            </div>
-        </div>
-
-        <div class="arduino">
-            <div class="imgboite">
-                <img src="./image/arduino.png" alt="" class="imgArduino">
-            </div>
-            <div class="text-boite">
-                <h2>Télémetrie Arduino</h2>
-                <p>Un système de télémetrie concu à l'aide d'un arduino nano, un systeme permettant de récuperer toutes sortes d'informations, 
-                    tels que la température de l'arduino, la température du moteur, la vitesse de rotation du moteur, la vitesse du vehicule. 
-                    Tout ceci étant envoyé grace à un emmeteur sur bande FM à un second arduino nano affichant ces donées sur un mini ecran oled à l'aide 
-                    de la bibliothèque graphique U8G2.
-                </p>
-                <a href="#" class="btn"><span></span> Savoir plus</a>
+            <div class="arduino">
+                <div class="imgboite">
+                    <img src="./image/arduino.png" alt="" class="imgArduino">
+                </div>
+                <div class="text-boite">
+                    <h2>Télémetrie Arduino</h2>
+                    <p>Un système de télémetrie concu à l'aide d'un arduino nano, un systeme permettant de récuperer toutes sortes d'informations, 
+                        tels que la température de l'arduino, la température du moteur, la vitesse de rotation du moteur, la vitesse du vehicule. 
+                        Tout ceci étant envoyé grace à un emmeteur sur bande FM à un second arduino nano affichant ces donées sur un mini ecran oled à l'aide 
+                        de la bibliothèque graphique U8G2.
+                    </p>
+                    <a href="#" class="btn"><span></span> Savoir plus</a>
+                </div>
             </div>
         </div>
 
         <div id="aPropos" class="aPropos">
+            <div class="imgboite">
+                <img src="./image/photo.png" alt="" class="imgPhoto">
+            </div>
             <div class="text-boite">
                 <h2>A propos</h2>
                 <p>Je suis étudiant en Licence Informatique, précisement en 3ème année.</p>
