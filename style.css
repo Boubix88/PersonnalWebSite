@@ -1,0 +1,396 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.bandeau{
+    overflow: hidden;
+    position: fixed; /*Pour garder le bandeau fixe*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: none;
+    z-index: 100;
+}
+
+.bandeau::before{
+    content: '';
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+footer{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+footer .logo{
+    position: relative;
+    font-weight: 600;
+    text-decoration: none;
+    color: blanchedalmond;
+    font-size: 2em;
+}
+
+footer .navigation{
+    position: relative; /*Pour placer les boutons horizontalement*/
+    display: flex;
+}
+
+footer .navigation li{
+    list-style: none; /*Pour ne pas afficher de point*/
+}
+
+footer .navigation li a{
+    display: inline-block;
+    color: blanchedalmond;
+    font-weight: 400;
+    margin-left: 10px;
+    padding: 8px 15px;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: 0.5s ease-in-out;
+}
+
+footer .navigation li a.active,
+footer .navigation li a:hover{
+    background: blanchedalmond;
+    color: black;
+}
+
+
+/*Texts*/
+
+.text-boite a span{
+    width: 0;
+    height: 100%;
+    background: blue;
+    position: rel;
+    top: 0;
+    left: 0;
+    transition: 0.6 ease-in-out;
+    border-radius: 10px;
+}
+
+.text-boite a:hover span{
+    width: 100%;
+}
+
+.text-boite a:hover{
+    color: blanchedalmond;
+}
+
+
+/*Accueil*/
+
+.accueil{
+    min-height: 100vh;
+    background-color: rgb(41, 17, 17);
+    padding-top: 80px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+    scroll-behavior: smooth;
+}
+
+.accueil .text-boite{
+    position: relative;
+    max-width: 1000px;
+    flex-basis: 48%;
+}
+
+.accueil .text-boite a{
+    position: absolute;
+    padding: 10px 20px;
+    margin: 30px 0;
+    color: black;
+    font-weight: 600;
+    background: blanchedalmond;
+    transform: translate(-50%);
+    cursor: pointer;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.6s ease-in-out;
+}    
+
+.accueil .text-boite h2{
+    color: blanchedalmond;
+    font-size: 6rem;
+    font-weight: 700;
+}
+
+.accueil .text-boite p{
+    color: blanchedalmond;
+    margin-top: 20px;
+    font-size: 2rem;
+}
+
+
+/*Jeu*/
+
+.jeu{
+    min-height: 100vh;
+    background-color: rgb(20, 20, 24);
+    padding-top: 80px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+    scroll-behavior: smooth;
+}
+
+.jeu .text-boite{
+    position: relative;
+    right: 40px;
+    max-width: 600px;
+    flex-basis: 48%;
+}
+
+.jeu .text-boite a{
+    position: absolute;
+    padding: 10px 20px;
+    margin: 30px 0;
+    color: black;
+    font-weight: 600;
+    background: blanchedalmond;
+    transform: translate(-50%);
+    cursor: pointer;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.6s ease-in-out;
+}    
+
+.jeu .text-boite h2{
+    color: blanchedalmond;
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.jeu .text-boite p{
+    color: blanchedalmond;
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+.jeu .text-boite .btn{
+    position: absolute;
+}
+
+.jeu .imgboite{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    flex-basis: 48%;
+}
+
+.jeu .imgboite img{
+    max-width: 1000px;
+}
+
+
+/*Arduino*/
+
+.arduino{
+    min-height: 100vh;
+    background-color: rgb(21, 21, 52);
+    padding-top: 80px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+    scroll-behavior: smooth;
+}
+
+.arduino .text-boite{
+    left: 40px;
+    position: relative;
+    max-width: 600px;
+    flex-basis: 48%;
+}
+
+.arduino .text-boite a{
+    position: absolute;
+    padding: 10px 20px;
+    margin: 30px 0;
+    color: black;
+    font-weight: 600;
+    background: blanchedalmond;
+    transform: translate(-50%);
+    cursor: pointer;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.6s ease-in-out;
+}    
+
+.arduino .text-boite h2{
+    color: blanchedalmond;
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.arduino .text-boite p{
+    color: blanchedalmond;
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+.arduino .imgboite{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    flex-basis: 48%;
+}
+
+.arduino .imgboite img{
+    max-width: 1000px;
+}
+
+
+/*A propos*/
+
+.aPropos{
+    min-height: 100vh;
+    background-color: rgb(44, 19, 40);
+    padding-top: 80px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+    scroll-behavior: smooth;
+}
+
+.aPropos .text-boite{
+    position: relative;
+    max-width: 1000px;
+    flex-basis: 48%;
+}
+
+.aPropos .text-boite a{
+    position: absolute;
+    padding: 10px 20px;
+    margin: 30px 0;
+    color: black;
+    font-weight: 600;
+    background: blanchedalmond;
+    transform: translate(-50%);
+    cursor: pointer;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.6s ease-in-out;
+}    
+
+.aPropos .text-boite h2{
+    color: blanchedalmond;
+    font-size: 6rem;
+    font-weight: 700;
+}
+
+.aPropos .text-boite p{
+    color: blanchedalmond;
+    margin-top: 20px;
+    font-size: 2rem;
+}
+
+
+/*A propos*/
+
+.contacts{
+    min-height: 100vh;
+    background-color: rgb(46, 45, 11);
+    padding-top: 80px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+    scroll-behavior: smooth;
+}
+
+.contacts .text-boite{
+    position: relative;
+    max-width: 1000px;
+    flex-basis: 48%;
+}
+
+.contacts .text-boite a{
+    position: absolute;
+    padding: 10px 20px;
+    margin: 30px 0;
+    color: black;
+    font-weight: 600;
+    background: blanchedalmond;
+    transform: translate(-50%);
+    cursor: pointer;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.6s ease-in-out;
+}    
+
+.contacts .text-boite h2{
+    color: blanchedalmond;
+    font-size: 6rem;
+    font-weight: 700;
+}
+
+.contacts .text-boite p{
+    color: blanchedalmond;
+    margin-top: 20px;
+    font-size: 2rem;
+}
+
+.contacts .imgboite{
+    position: absolute;
+    width: 100%;
+    padding-top: 10%;
+    flex-basis: 48%;
+}
+
+.contacts .imgboite img{
+    margin-left: 10px;
+    max-width: 3%;
+}
+
+
+/*Transition*/
+
+.jeu .reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
+  
+.jeu .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
