@@ -71,10 +71,38 @@ nav .navigation li a:hover{
     color: black;
 }
 
+.sous-menu{
+    display: none;
+}
+
+nav > ul li:hover .sous-menu{
+    display: block;
+}
+
 nav.sticky{
     position: fixed;
     top: 0;
     left: 0;
+}
+
+.imgFleche .fleche_haut{
+    position: fixed;
+    z-index: 10;
+    max-width: 4%;
+    background: transparent;
+    top: 1%;
+    left: 48%;
+    opacity: 75%;
+} 
+
+.imgFleche .fleche_bas{
+    z-index: 10;
+    position: fixed;
+    max-width: 4%;
+    background: transparent;
+    top: 92%;
+    left: 48%;
+    opacity: 75%;
 }
 
 
@@ -456,7 +484,7 @@ nav.sticky{
 .contacts .imgboite{
     position: absolute;
     width: 100%;
-    padding-top: 10%;
+    padding-top: 2%;
     flex-basis: 48%;
 }
 

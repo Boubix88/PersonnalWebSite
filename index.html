@@ -11,10 +11,17 @@
         
         <div class="header">
             <nav id="bandeau">
-                <a href="#" class="logo">Boubix</a>
+                <a href="#" class="logo">Sandy Gehin</a>
                 <ul id="navigation" class="navigation">
                     <li><a href="#" id="boutonAccueil">Accueil</a></li>
-                    <li><a href="#jeu" id="boutonProjet">Projets</a></li>
+                    <li>
+                        <a href="#jeu" id="boutonProjet">Projets ▼</a>
+                        <ul class="sous-menu">
+                            <li><a href="#jeu">Jeu 3D</a></li>
+                            <li><a href="#arduino">Arduino</a></li>
+                            <li><a href="#jeuAndroid">Jeu Android</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#aPropos" id="boutonAPropos">A propos</a></li>
                     <li><a href="#contacts" id="boutonContacts">Contacts</a></li>
                 </ul>
@@ -41,7 +48,7 @@
                 </div>
             </div>
 
-            <div class="arduino">
+            <div id="arduino" class="arduino">
                 <div class="imgboite reveal">
                     <img src="./image/arduino.png" alt="" class="imgArduino">
                 </div>
@@ -102,6 +109,15 @@
                     <img src="./image/logo_gitlab.png" alt="gitlab" class="imgContacts">
                 </a>
             </div>
+        </div>
+
+        <div class="imgFleche">
+            <a href="javascript:void(0)" onclick="applyButtonArrowTop()" id="fleche_haut">
+                <img src="./image/fleche_haut.png" alt="" class="fleche_haut">
+            </a>
+            <a href="javascript:void(0)" onclick="applyButtonArrowBottom()" id="fleche_bas">
+                <img src="./image/fleche_bas.png" alt="" class="fleche_bas">
+            </a>
         </div>
 
         <script type="text/javascript" src="fonctions.js"></script>
