@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "short_name": "Boubix",
+    "name": "Manifest",
+    "version": "1.0",
+    "web_accessible_resources": [
+      {
+        "resources": [
+          "*.html",
+          "*.css",
+          "image/arduino.png",
+          "image/jeu.png",
+          "image/logo_fb.png",
+          "image/logo_github.png",
+          "image/logo_gitlab.png",
+          "image/logo_insta.png",
+          "image/logo_twitter.png",
+          "image/photo.png"
+        ],
+        "matches": [],
+        "extension_ids": []
+      }
+    ]
+  }
