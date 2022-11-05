@@ -66,6 +66,7 @@ nav .navigation li a{
     transition: 0.5s ease-in-out;
 }
 
+nav .navigation li a:active,
 nav .navigation li a:hover{
     background: blanchedalmond;
     color: black;
