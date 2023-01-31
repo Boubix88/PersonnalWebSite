@@ -49,6 +49,7 @@ nav .logo{
 nav .navigation{
     position: relative; /*Pour placer les boutons horizontalement*/
     display: flex;
+    z-index: 10;
 }
 
 nav .navigation li{
@@ -133,7 +134,7 @@ nav.sticky{
 
 .accueil{
     min-height: 100vh;
-    background-color: rgb(43, 64, 61);
+    background-color: rgb(51, 51, 53);
     padding-top: 80px;
     position: relative;
     width: 100%;
@@ -178,27 +179,92 @@ nav.sticky{
 }
 
 
+/* Slide */
+
+.slider .slick-slide{
+    height:auto!important;
+}
+
+.slick-arrow:before{
+    content:""!important;
+    width: 100%!important;
+    height: 100%!important;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.slick-next:before{
+    background: url(./image/fleche_droite.png)!important;
+    background-size: contain!important;
+}
+
+.slick-prev:before{
+    background: url(./image/fleche_gauche.png)!important;
+    background-size: contain!important;
+}
+
+.slick-next{ 
+    right:1%!important;
+}
+
+.slick-prev{ 
+    left:1%!important; 
+}
+
+.slick-arrow{
+    z-index:2!important;
+    width:50px!important;
+    height:50px!important;
+}
+
+.slick-dots li button:before {
+    background-color: blanchedalmond;
+    height: 100%;
+    width: 100%;
+    text-indent: -9999px;
+    }
+
+.slick-dots{
+    /*bottom: initial!important;*/
+    background-color: rgb(51, 51, 53) !important;
+    padding-top: 5px !important;
+    top: 95% !important;
+    padding-bottom: 70px !important;
+}
+
+
+/* Contenu */
+
+.projets{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(51, 51, 53);
+}
+
+
 /*Jeu*/
 
 .jeu{
-    min-height: 100vh;
-    background-color: rgb(192, 169, 189);
     padding-top: 80px;
     position: relative;
     width: 100%;
+    height: 100%;
     display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    flex-wrap: wrap;
     scroll-behavior: smooth;
 }
 
 .jeu .text-boite{
     position: relative;
-    right: 40px;
-    max-width: 600px;
+    left: 5%;
+    float: left;
+    padding-top: 10%;
+    width: 30%;
+    height: 80vh;
     flex-basis: 48%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
 }
 
 .jeu .text-boite a{
@@ -233,9 +299,10 @@ nav.sticky{
 
 .jeu .imgboite{
     position: relative;
+    padding-top: 5%;
+    left: 10%;
     width: 100%;
-    height: 100%;
-    flex-basis: 48%;
+    height: 80vh;
 }
 
 .jeu .imgboite img{
@@ -244,133 +311,31 @@ nav.sticky{
 }
 
 
-/*Arduino*/
+/* Android */
 
-.arduino{
-    min-height: 100vh;
-    background-color: rgb(148, 167, 174);
-    padding-top: 80px;
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    flex-wrap: wrap;
-    scroll-behavior: smooth;
+.imgboiteAndroid{
+    left: 10%;
 }
 
-.arduino .text-boite{
-    left: 40px;
-    position: relative;
-    max-width: 600px;
-    flex-basis: 48%;
-}
-
-.arduino .text-boite a{
-    position: absolute;
-    padding: 10px 20px;
-    margin: 30px 0;
-    color: black;
-    font-weight: 600;
-    background: blanchedalmond;
-    transform: translate(-50%);
-    cursor: pointer;
-    border-radius: 10px;
-    text-decoration: none;
-    transition: 0.6s ease-in-out;
-}    
-
-.arduino .text-boite h2{
-    color: blanchedalmond;
-    font-size: 4rem;
-    font-weight: 700;
-}
-
-.arduino .text-boite p{
-    color: blanchedalmond;
-    margin-top: 20px;
-    font-size: 25px;
-}
-
-.arduino .imgboite{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    flex-basis: 48%;
-}
-
-.arduino .imgboite img{
-    max-width: 1000px;
-    box-shadow: 0px 10px 10px black;
-}
-
-
-/*Jeu Android*/
-
-.jeuAndroid{
-    min-height: 100vh;
-    background-color: rgb(157, 74, 112);
-    padding-top: 80px;
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    flex-wrap: wrap;
-    scroll-behavior: smooth;
-}
-
-.jeuAndroid .text-boite{
-    position: relative;
-    right: 40px;
-    max-width: 600px;
-    flex-basis: 48%;
-}
-
-.jeuAndroid .text-boite a{
-    position: absolute;
-    padding: 10px 20px;
-    margin: 30px 0;
-    color: black;
-    font-weight: 600;
-    background: blanchedalmond;
-    transform: translate(-50%);
-    cursor: pointer;
-    border-radius: 10px;
-    text-decoration: none;
-    transition: 0.6s ease-in-out;
-}    
-
-.jeuAndroid .text-boite h2{
-    color: blanchedalmond;
-    font-size: 4rem;
-    font-weight: 700;
-}
-
-.jeuAndroid .text-boite p{
-    color: blanchedalmond;
-    margin-top: 20px;
-    font-size: 25px;
-}
-
-.jeuAndroid .text-boite .btn{
-    position: absolute;
-}
-
-.jeuAndroid .imgboite{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    flex-basis: 48%;
-}
-
-.jeuAndroid .imgboite img{
+.imgJeuAndroid{
+    float: left;
     margin: 10px;
-    max-width: 30%;
+    max-width: 15%;
     border-radius: 50px;
     box-shadow: 0px 10px 10px black;
+}
+
+
+/* Site Cocktails */
+
+.imgBoiteSite{
+    left: 10%;
+    padding-top: 5%;
+}
+
+.imgSite{
+    float: left;
+    width: 55%;
 }
 
 
@@ -378,7 +343,7 @@ nav.sticky{
 
 .aPropos{
     min-height: 100vh;
-    background-color: rgb(100, 118, 106);
+    background-color: rgb(51, 51, 53);
     padding-top: 80px;
     position: relative;
     width: 100%;
@@ -439,7 +404,7 @@ nav.sticky{
 
 .contacts{
     min-height: 100vh;
-    background-color: rgb(29, 49, 37);
+    background-color: rgb(51, 51, 53);
     padding-top: 80px;
     position: absolute;
     width: 100%;
@@ -484,6 +449,7 @@ nav.sticky{
 
 .contacts .imgboite{
     position: absolute;
+    z-index: 2;
     width: 100%;
     padding-top: 2%;
     flex-basis: 48%;

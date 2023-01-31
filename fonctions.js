@@ -45,21 +45,11 @@ window.onscroll = function(){
 function applyButtonArrowBottom(){
     switch (position){
         case "Accueil":
-            window.location.href="#jeu";
-            position = "Jeu";
+            window.location.href="#projets";
+            position = "Projets";
         break;
         
-        case "Jeu":
-            window.location.href="#arduino";
-            position = "Arduino";
-        break;
-        
-        case "Arduino":
-            window.location.href="#jeuAndroid";
-            position = "JeuAndroid";
-        break;
-        
-        case "JeuAndroid":
+        case "Projets":
             window.location.href="#aPropos";
             position = "APropos";
         break;
@@ -79,24 +69,14 @@ function applyButtonArrowTop(){
         case "Accueil":
         break;
         
-        case "Jeu":
+        case "Projets":
             window.location.href="#accueil";
             position = "Accueil";
         break;
         
-        case "Arduino":
-            window.location.href="#jeu";
-            position = "Jeu";
-        break;
-        
-        case "JeuAndroid":
-            window.location.href="#arduino";
-            position = "Arduino";
-        break;
-        
         case "APropos":
-            window.location.href="#jeuAndroid";
-            position = "JeuAndroid";
+            window.location.href="#projets";
+            position = "Projets";
         break;
         
         case "Contacts":
@@ -132,3 +112,19 @@ function setBtnStyle(window, element, btn){
     }
 	return;
 }
+
+function applyBtnStyleOver(id){
+    document.getElementById(id).style = "background: blanchedalmond; color: black;";
+}
+
+function applyBtnStyleOut(id){
+    document.getElementById(id).style = "background: transparent; color: blanchedalmond;";
+}
+
+$('.projets').slick({
+    dots: true,
+    arrows: true,
+    autoplay: true,
+    infinite: true,
+    autoplaySpeed: 4000
+});

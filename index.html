@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site Web</title>
 </head>
@@ -14,16 +16,9 @@
                 <a href="#" class="logo">Sandy Gehin</a>
                 <ul id="navigation" class="navigation">
                     <li><a href="#" id="boutonAccueil">Accueil</a></li>
-                    <li>
-                        <a href="#jeu" id="boutonProjet">Projets ▼</a>
-                        <ul class="sous-menu">
-                            <li><a href="#jeu">Jeu 3D</a></li>
-                            <li><a href="#arduino">Arduino</a></li>
-                            <li><a href="#jeuAndroid">Jeu Android</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#aPropos" id="boutonAPropos">A propos</a></li>
-                    <li><a href="#contacts" id="boutonContacts">Contacts</a></li>
+                    <li><a href="#projets" id="boutonProjet" onmouseover="applyBtnStyleOver('boutonProjet')" onmouseout="applyBtnStyleOut('boutonProjet')">Projets</a></li>
+                    <li><a href="#aPropos" id="boutonAPropos" onmouseover="applyBtnStyleOver('boutonAPropos')" onmouseout="applyBtnStyleOut('boutonAPropos')">A propos</a></li>
+                    <li><a href="#contacts" id="boutonContacts" onmouseover="applyBtnStyleOver('boutonContacts')" onmouseout="applyBtnStyleOut('boutonContacts')">Contacts</a></li>
                 </ul>
             </nav>
         </div>
@@ -35,44 +30,58 @@
             </div>
         </div>
 
-        <div id="projets">
+        <div class="projets" id="projets">
+            
             <div id="jeu" class="jeu">
                 <div class="text-boite reveal">
                     <h2>Jeu 3D</h2>
-                    <p>Prison Survival, un jeu 2D donnant une illusion de 3D grace à la technique du Raycasting. Un jeu concu entierement en C, 
+                    <p>Prison Survival, un jeu 2D donnant une illusion de 3D grâce à la technique du Raycasting. Un jeu concu entierement en C, 
                     utilisant comme librairie graphique la SDL2.</p>
-                    <a href="https://github.com/Boubix88/Projet_S3" target="_blank" class="btn"><span></span> Savoir plus</a>
+                    <a href="https://github.com/Boubix88/Projet_S3" target="_blank" class="btn reveal"><span></span> Savoir plus</a>
                 </div>
                 <div class="imgboite reveal">
                     <img src="./image/jeu.png" alt="" class="imgJeu">
                 </div>
             </div>
 
-            <div id="arduino" class="arduino">
-                <div class="imgboite reveal">
-                    <img src="./image/arduino.png" alt="" class="imgArduino">
-                </div>
+            <div id="arduino" class="jeu">
                 <div class="text-boite reveal">
                     <h2>Télémetrie Arduino</h2>
-                    <p>Un système de télémetrie concu à l'aide d'un arduino nano, un systeme permettant de récuperer toutes sortes d'informations, 
+                    <p>Un système de télémetrie conçu à l'aide d'un arduino nano, un systeme permettant de récuperer toutes sortes d'informations, 
                         tels que la température de l'arduino, la température du moteur, la vitesse de rotation du moteur, la vitesse du vehicule. 
                         Tout ceci étant envoyé grace à un emmeteur sur bande FM à un second arduino nano affichant ces donées sur un mini ecran oled à l'aide 
                         de la bibliothèque graphique U8G2.
                     </p>
-                    <a href="#" class="btn reveal"><span></span> Savoir plus</a>
+                    <a href="https://github.com/Boubix88/Arduino_Telemtrie_Trophy_Truck_RC" target="_blank" class="btn reveal"><span></span> Savoir plus</a>
+                </div>
+                <div class="imgboite reveal">
+                    <img src="./image/arduino.png" alt="" class="imgArduino">
                 </div>
             </div>
 
-            <div id="jeuAndroid" class="jeuAndroid">
+            <div id="jeuAndroid" class="jeu">
                 <div class="text-boite reveal">
                     <h2>Jeu Android</h2>
-                    <p>Android CLicker, un ensemble de mini jeux concus pour la plateforme Android dans le but d'en aprendre plus sur le développement mobile</p>
-                    <a href="https://github.com/Boubix88/Android_Clicker" target="_blank" class="btn"><span></span> Savoir plus</a>
+                    <p>Android Clicker, un ensemble de mini jeux conçus pour la plateforme Android dans le but d'en aprendre plus sur le développement mobile</p>
+                    <a href="https://github.com/Boubix88/Android_Clicker" target="_blank" class="btn reveal"><span></span> Savoir plus</a>
                 </div>
-                <div class="imgboite reveal">
+                <div class="imgboiteAndroid reveal">
                     <img src="./image/jeu_tel_1.jpg" alt="" class="imgJeuAndroid">
                     <img src="./image/jeu_tel_2.jpg" alt="" class="imgJeuAndroid">
                     <img src="./image/jeu_tel_3.jpg" alt="" class="imgJeuAndroid">
+                </div>
+            </div>
+
+            <div id="siteCocktails" class="jeu">
+                <div class="text-boite reveal">
+                    <h2>Site de cocktails</h2>
+                    <p>Cocktails, c'est un site web ou l'on retrouve une multitude de cocktails ainsi que leur recette. On a la possibilité d'ajouter un cocktails
+                        à son panier. Ce site est conçu en PHP, Html, JavaScript et utilise une base de données MySql.
+                    </p>
+                    <a href="https://cocktails2.000webhostapp.com/" target="_blank" class="btn reveal"><span></span>Cocktails</a>
+                </div>
+                <div class="imgBoiteSite reveal">
+                    <img src="./image/site_cocktails.png" alt="" class="imgSite">
                 </div>
             </div>
         </div>
@@ -83,17 +92,14 @@
             </div>
             <div class="text-boite reveal">
                 <h2>A propos</h2>
-                <p>Je suis étudiant en Licence Informatique, précisement en 3ème année.</p>
+                <p>Je suis étudiant en 3ème année de Licence Informatique à la Faculté de Sciences et Technologies.
+                    Depuis petit l'informatique me passionne, j'aime apprendre de nouvelles choses dans le domaine.</p>
             </div>
         </div>
 
         <div id="contacts" class="contacts">
-            <div class="text-boite reveal">
-                <h2>Contacts</h2>
-                <p><br>E-mail : sandygehin2@gmail.com</br>Tel : 06.23.32.90.11</p>
-            </div>
             <div class="imgboite reveal">
-                <a href="https://m.facebook.com/sandy.gehin?eav=AfaWi63x3NXoKFZhsgDk01sPSbzabNmqF7FbBzenR_ni79FwRgfsPUDvVjxUl6qhgX8&paipv=0" target="_blank">
+                <!--<a href="https://m.facebook.com/sandy.gehin?eav=AfaWi63x3NXoKFZhsgDk01sPSbzabNmqF7FbBzenR_ni79FwRgfsPUDvVjxUl6qhgX8&paipv=0" target="_blank">
                     <img src="./image/logo_fb.webp" alt="facebook" class="imgContacts">
                 </a>
                 <a href="https://twitter.com/GehinSandy" target="_blank">
@@ -101,13 +107,17 @@
                 </a>
                 <a href="https://www.instagram.com/sandy.ghn/" target="_blank">
                     <img src="./image/logo_insta.webp" alt="instagram" class="imgContacts">
-                </a>
+                </a>-->
                 <a href="https://github.com/Boubix88" target="_blank">
                     <img src="./image/logo_github.png" alt="github" class="imgContacts">
                 </a>
                 <a href="https://gitlab.univ-lorraine.fr/gehin94u" target="_blank">
                     <img src="./image/logo_gitlab.png" alt="gitlab" class="imgContacts">
                 </a>
+            </div>
+            <div class="text-boite reveal">
+                <h2>Contacts</h2>
+                <p><br>E-mail : sandygehin2@gmail.com</br>Tel : 06.23.32.90.11</p>
             </div>
         </div>
 
@@ -120,6 +130,10 @@
             </a>
         </div>
 
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         <script type="text/javascript" src="fonctions.js"></script>
+        
 </body>
 </html>
