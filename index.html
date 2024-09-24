@@ -6,84 +6,215 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
+
+    <link href='https://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' type='text/css'> <!-- Css des boutons -->
+    <link href='button.css' rel='stylesheet' type='text/css'> <!-- Css des boutons -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Arvo&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site Web</title>
 </head>
 <body>
         
         <div class="header">
-            <nav id="bandeau">
+
+            <nav role="navigation" class="primary-navigation">
                 <a href="#" class="logo">Sandy Gehin</a>
-                <ul id="navigation" class="navigation">
-                    <li><a href="#" id="boutonAccueil">Accueil</a></li>
-                    <li><a href="#projets" id="boutonProjet" onmouseover="applyBtnStyleOver('boutonProjet')" onmouseout="applyBtnStyleOut('boutonProjet')">Projets</a></li>
-                    <li><a href="#aPropos" id="boutonAPropos" onmouseover="applyBtnStyleOver('boutonAPropos')" onmouseout="applyBtnStyleOut('boutonAPropos')">A propos</a></li>
-                    <li><a href="#contacts" id="boutonContacts" onmouseover="applyBtnStyleOver('boutonContacts')" onmouseout="applyBtnStyleOut('boutonContacts')">Contacts</a></li>
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">Projets &dtrif;</a>
+                        <ul class="dropdown">
+                            <li><a href="#projetsEtu">Projets étudiant</a></li>
+                            <li><a href="#projetsPerso">Projets personnels</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#aPropos">A propos</a></li>
+                    <li><a href="#contacts">Contact</a></li>
                 </ul>
             </nav>
+
         </div>
 
         <div id="accueil" class="accueil">
             <div class="text-boite">
                 <h2>Accueil</h2>
-                <p>Bienvenue sur mon site personnel ou vous pourrez retrouver mes projets personnels ainsi que la possibilité de me contacter.</p>
+                <p>Bienvenue sur mon site personnel ou vous pourrez retrouver mes projets personnels et étudiant ainsi que la possibilité de me contacter.</p>
             </div>
         </div>
 
-        <div class="projets" id="projets">
-            
-            <div id="jeu" class="jeu">
-                <div class="text-boite reveal">
-                    <h2>Jeu 3D</h2>
-                    <p>Prison Survival, un jeu 2D donnant une illusion de 3D grâce à la technique du Raycasting. Un jeu concu entierement en C, 
-                    utilisant comme librairie graphique la SDL2.</p>
-                    <a href="https://github.com/Boubix88/Projet_S3" target="_blank" class="btn reveal"><span></span> Savoir plus</a>
+        <div class="projets" id="projetsEtu">
+
+            <div id="carousselProjetsEtu" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carousselProjetsEtu" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carousselProjetsEtu" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carousselProjetsEtu" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
                 </div>
-                <div class="imgboite reveal">
-                    <img src="./image/jeu.png" alt="" class="imgJeu">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div id="jeu" class="jeu">
+                            <div class="text-boite">
+                                <h2>Jeu 3D</h2>
+                                <p>Prison Survival, un jeu 2D donnant une illusion de 3D grâce à la technique du Raycasting. Un jeu
+                                    concu entierement en C,
+                                    utilisant comme librairie graphique la SDL2.</p>
+                                <br>
+                                <a href="https://github.com/Boubix88/Projet_S3" target="_blank" class="btn-discover">
+                                    <svg>
+                                        <rect x="0" y="0" fill="none" width="166" height="45" />
+                                    </svg>
+                                    Découvrir&nbsp;<i class="bi bi-box-arrow-up-right"></i>
+                                </a>
+                            </div>
+                            <div class="imgboite">
+                                <img src="./image/jeu.png" alt="" class="imgJeu">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div id="siteCocktails" class="jeu">
+                            <div class="text-boite">
+                                <h2>Site de cocktails</h2>
+                                <p>Cocktails, c'est un site web ou l'on retrouve une multitude de cocktails ainsi que leur recette.
+                                    On a la possibilité d'ajouter un cocktails
+                                    à son panier. Ce site est conçu en PHP, Html, JavaScript et utilise une base de données MySql.
+                                </p>
+                                <br>
+                                <a href="https://cocktails2.000webhostapp.com/" target="_blank" class="btn-discover">
+                                    <svg>
+                                        <rect x="0" y="0" fill="none" width="166" height="45" />
+                                    </svg>
+                                    Découvrir&nbsp;<i class="bi bi-box-arrow-up-right"></i>
+                                </a>
+                            </div>
+                            <div class="imgBoite">
+                                <img src="./image/site_cocktails.png" alt="" class="imgJeu">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div id="jeuEte" class="jeu">
+                            <div class="text-boite">
+                                <h2>Jeu 2D</h2>
+                                <p>ETE (Epopée des terres étherées) est un jeu PC ou l'on incarne un personnage dans un monde ou l'on doit éliminer des ennemis.
+                                    Ce jeu est conçu en JAVA et utilise la librairie graphique TiledMap, ce projet a été réalisé en groupe de 4.
+                                </p>
+                                <br>
+                                <a href="https://github.com/Onin88/ACL_Game_2D_ETE" target="_blank" class="btn-discover">
+                                    <svg>
+                                        <rect x="0" y="0" fill="none" width="166" height="45" />
+                                    </svg>
+                                    Découvrir&nbsp;<i class="bi bi-box-arrow-up-right"></i>
+                                </a>
+                            </div>
+                            <div class="imgBoite">
+                                <img src="./image/ete_1.png" alt="" class="imgJeu">
+                                <img src="./image/ete_2.png" alt="" class="imgJeu">
+                                <img src="./image/ete_3.png" alt="" class="imgJeu">
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousselProjetsEtu"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousselProjetsEtu"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
 
-            <div id="arduino" class="jeu">
-                <div class="text-boite reveal">
-                    <h2>Télémetrie Arduino</h2>
-                    <p>Un système de télémetrie conçu à l'aide d'un arduino nano, un systeme permettant de récuperer toutes sortes d'informations, 
-                        tels que la température de l'arduino, la température du moteur, la vitesse de rotation du moteur, la vitesse du vehicule. 
-                        Tout ceci étant envoyé grace à un emmeteur sur bande FM à un second arduino nano affichant ces donées sur un mini ecran oled à l'aide 
-                        de la bibliothèque graphique U8G2.
-                    </p>
-                    <a href="https://github.com/Boubix88/Arduino_Telemtrie_Trophy_Truck_RC" target="_blank" class="btn reveal"><span></span> Savoir plus</a>
+        </div>
+
+
+        <div class="projets" id="projetsPerso">
+
+            <div id="carousselProjetsPerso" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carousselProjetsPerso" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carousselProjetsPerso" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carousselProjetsPerso" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
                 </div>
-                <div class="imgboite reveal">
-                    <img src="./image/arduino.png" alt="" class="imgArduino">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div id="arduino" class="jeu">
+                            <div class="text-boite">
+                                <h2>Télémetrie Arduino</h2>
+                                <p>Un système de télémetrie conçu à l'aide d'un arduino nano, un systeme permettant de récuperer toutes sortes d'informations, 
+                                    tels que la température de l'arduino, la température du moteur, la vitesse de rotation du moteur, la vitesse du vehicule. 
+                                    Tout ceci étant envoyé grace à un emmeteur sur bande FM à un second arduino nano affichant ces donées sur un mini ecran oled à l'aide 
+                                    de la bibliothèque graphique U8G2.
+                                </p>
+                                <br>
+                                <a href="https://github.com/Boubix88/Arduino_Telemtrie_Trophy_Truck_RC" target="_blank" class="btn-discover">
+                                    <svg>
+                                        <rect x="0" y="0" fill="none" width="166" height="45" />
+                                    </svg>
+                                    Découvrir&nbsp;<i class="bi bi-box-arrow-up-right"></i>
+                                </a>
+                            </div>
+                            <div class="imgboite">
+                                <img src="./image/arduino.png" alt="" class="imgArduino">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div id="jeuAndroid" class="jeu">
+                            <div class="text-boite">
+                                <h2>Jeu Android</h2>
+                                <p>Android Clicker, un ensemble de mini jeux conçus pour la plateforme Android dans le but d'en aprendre plus sur le développement mobile</p>
+                                <br>
+                                <a href="https://github.com/Boubix88/Android_Clicker" target="_blank" class="btn-discover">
+                                    <svg>
+                                        <rect x="0" y="0" fill="none" width="166" height="45" />
+                                    </svg>
+                                    Découvrir&nbsp;<i class="bi bi-box-arrow-up-right"></i>
+                                </a>
+                            </div>
+                            <div class="imgboiteAndroid">
+                                <img src="./image/jeu_tel_1.jpg" alt="" class="imgJeuAndroid">
+                                <img src="./image/jeu_tel_2.jpg" alt="" class="imgJeuAndroid">
+                                <img src="./image/jeu_tel_3.jpg" alt="" class="imgJeuAndroid">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div id="appliMeccanocar" class="jeu">
+                            <div class="text-boite">
+                                <h2>Application Meccanocar - Android</h2>
+                                <p>Application Android non oficielle pour la societé Meccanocar</p>
+                            </div>
+                            <div class="imgboiteAndroid">
+                                <img src="./image/meccanocar_1.jpg" alt="" class="imgJeuAndroid">
+                                <img src="./image/meccanocar_2.jpg" alt="" class="imgJeuAndroid">
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousselProjetsPerso"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousselProjetsPerso"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
 
-            <div id="jeuAndroid" class="jeu">
-                <div class="text-boite reveal">
-                    <h2>Jeu Android</h2>
-                    <p>Android Clicker, un ensemble de mini jeux conçus pour la plateforme Android dans le but d'en aprendre plus sur le développement mobile</p>
-                    <a href="https://github.com/Boubix88/Android_Clicker" target="_blank" class="btn reveal"><span></span> Savoir plus</a>
-                </div>
-                <div class="imgboiteAndroid reveal">
-                    <img src="./image/jeu_tel_1.jpg" alt="" class="imgJeuAndroid">
-                    <img src="./image/jeu_tel_2.jpg" alt="" class="imgJeuAndroid">
-                    <img src="./image/jeu_tel_3.jpg" alt="" class="imgJeuAndroid">
-                </div>
-            </div>
-
-            <div id="siteCocktails" class="jeu">
-                <div class="text-boite reveal">
-                    <h2>Site de cocktails</h2>
-                    <p>Cocktails, c'est un site web ou l'on retrouve une multitude de cocktails ainsi que leur recette. On a la possibilité d'ajouter un cocktails
-                        à son panier. Ce site est conçu en PHP, Html, JavaScript et utilise une base de données MySql.
-                    </p>
-                    <a href="https://cocktails2.000webhostapp.com/" target="_blank" class="btn reveal"><span></span>Cocktails</a>
-                </div>
-                <div class="imgBoiteSite reveal">
-                    <img src="./image/site_cocktails.png" alt="" class="imgSite">
-                </div>
-            </div>
         </div>
 
         <div id="aPropos" class="aPropos">
@@ -92,14 +223,48 @@
             </div>
             <div class="text-boite reveal">
                 <h2>A propos</h2>
-                <p>Je suis étudiant en 3ème année de Licence Informatique à la Faculté de Sciences et Technologies.
-                    Depuis petit l'informatique me passionne, j'aime apprendre de nouvelles choses dans le domaine.</p>
+                <p>Je suis étudiant en 2ème année de Master Informatique specialité ingénierie logicielle à la Faculté de Sciences et Technologies.
+                    Depuis petit l'informatique me passionne, j'aime explorer de nouveaux concepts dans le domaine.
+                    Je suis également passionné de jeux vidéos, de mécanique et de bricolage. Voici quelques projets que j'ai réalisé:
+                </p>
+                <br>
+                <a href="https://github.com/Boubix88/Projet_S3" target="_blank" class="btn-discover">
+                    <svg>
+                        <rect x="0" y="0" fill="none" width="166" height="45" />
+                    </svg>
+                    Découvrir&nbsp;<i class="bi bi-box-arrow-up-right"></i>
+                </a>
             </div>
         </div>
 
         <div id="contacts" class="contacts">
-            <div class="imgboite reveal">
-                <!--<a href="https://m.facebook.com/sandy.gehin?eav=AfaWi63x3NXoKFZhsgDk01sPSbzabNmqF7FbBzenR_ni79FwRgfsPUDvVjxUl6qhgX8&paipv=0" target="_blank">
+            <div class="text-boite reveal">
+                <h2>Contacts</h2>
+                <p>E-mail : sandygehin2@gmail.com</br>Tel : 07.50.01.87.20</p>
+                <div class="contactLinks">
+                    <!--<a href="www.linkedin.com/in/sandy-gehin-2aa5b0257" target="_blank" title="Website name" class="bi bi-linkedin"></a>
+                    <a href="https://github.com/Boubix88" target="_blank" class="bi bi-github"></a>
+                    <a href="https://gitlab.univ-lorraine.fr/gehin94u" target="_blank" class="bi bi-gitlab"></a>-->
+                    <i class="bi bi-linkedin" id="linkedin-icon"></i>
+                    <i class="bi bi-github" id="github-icon"></i>
+                    <i class="bi bi-gitlab" id="gitlab-icon"></i>
+                </div>
+                
+                
+                <div class="contactLinks">
+                    <!--<a href="www.linkedin.com/in/sandy-gehin-2aa5b0257" target="_blank" class="contactLink">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/Boubix88" target="_blank" class="contactLink">
+                        <i class="bi bi-github"></i>
+                    </a>
+                    <a href="https://gitlab.univ-lorraine.fr/gehin94u" target="_blank" class="contactLink">
+                        <i class="bi bi-gitlab"></i>
+                    </a>-->
+                </div>
+            </div>
+            <!--<div class="imgboite reveal">
+                <a href="https://m.facebook.com/sandy.gehin?eav=AfaWi63x3NXoKFZhsgDk01sPSbzabNmqF7FbBzenR_ni79FwRgfsPUDvVjxUl6qhgX8&paipv=0" target="_blank">
                     <img src="./image/logo_fb.webp" alt="facebook" class="imgContacts">
                 </a>
                 <a href="https://twitter.com/GehinSandy" target="_blank">
@@ -107,33 +272,41 @@
                 </a>
                 <a href="https://www.instagram.com/sandy.ghn/" target="_blank">
                     <img src="./image/logo_insta.webp" alt="instagram" class="imgContacts">
-                </a>-->
+                </a>
                 <a href="https://github.com/Boubix88" target="_blank">
                     <img src="./image/logo_github.png" alt="github" class="imgContacts">
                 </a>
                 <a href="https://gitlab.univ-lorraine.fr/gehin94u" target="_blank">
                     <img src="./image/logo_gitlab.png" alt="gitlab" class="imgContacts">
                 </a>
-            </div>
-            <div class="text-boite reveal">
-                <h2>Contacts</h2>
-                <p><br>E-mail : sandygehin2@gmail.com</br>Tel : 06.23.32.90.11</p>
-            </div>
+                <a href="www.linkedin.com/in/sandy-gehin-2aa5b0257" target="_blank">
+                    <img src="./image/logo_in.png" alt="linkedin" class="imgContacts">
+                </a>
+            </div>-->
         </div>
 
         <div class="imgFleche">
-            <a href="javascript:void(0)" onclick="applyButtonArrowTop()" id="fleche_haut">
-                <img src="./image/fleche_haut.png" alt="" class="fleche_haut">
-            </a>
-            <a href="javascript:void(0)" onclick="applyButtonArrowBottom()" id="fleche_bas">
-                <img src="./image/fleche_bas.png" alt="" class="fleche_bas">
-            </a>
+            <div class="fleche_haut">
+                <a href="javascript:void(0)" onclick="applyButtonArrowTop()" id="fleche_haut">
+                    <!--<img src="./image/fleche_haut.png" alt="" class="fleche_haut">-->
+                    <i class="bi bi-arrow-up-circle-fill"></i>
+                </a>
+            </div>
+
+            <div class="fleche_bas">
+                <a href="javascript:void(0)" onclick="applyButtonArrowBottom()" id="fleche_bas">
+                    <!--<img src="./image/fleche_haut.png" alt="" class="fleche_haut">-->
+                    <i class="bi bi-arrow-down-circle-fill"></i>
+                </a>
+            </div>
         </div>
 
         <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <!--<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>-->
         <script type="text/javascript" src="fonctions.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
         
 </body>
 </html>

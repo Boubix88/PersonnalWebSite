@@ -9,13 +9,13 @@ html {
 }
 
 .header{
-    position: absolute; 
+    position: fixed; 
+    z-index: 1;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: transparent;
-    z-index: 10;
 }
 
 .header::before{
@@ -27,90 +27,142 @@ html {
     height: 100%;
 }
 
-nav{
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 20px;
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-}
 
-nav .logo{
-    position: relative;
-    font-weight: 600;
-    text-decoration: none;
-    color: blanchedalmond;
-    font-size: 2em;
-}
 
-nav .navigation{
-    position: relative; /*Pour placer les boutons horizontalement*/
-    display: flex;
-    z-index: 10;
-}
+nav {
+    &.primary-navigation {
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            /* Ajouté pour espacer le logo et la navigation */
+            align-items: center;
+            /* Pour centrer verticalement */
+            text-align: right;
+            font-size: 16px;
+            /*background-color: aqua;*/
+            background-color: rgb(51, 51, 53);
+    
+    
+            ul li {
+                list-style: none;
+                margin: 0 auto;
+                border-left: 2px solid #3ca0e7;
+                display: inline-block;
+                padding: 0 30px;
+                position: relative;
+                text-decoration: none;
+                text-align: center;
+                font-family: arvo;
+            }
+    
+            .logo {
+                /* Logo Sandy Gehin */
+                font-weight: 600;
+                text-decoration: none;
+                color: blanchedalmond;
+                font-size: 2em;
+            }
+    
+            li a {
+                color: blanchedalmond;
+                text-decoration: none;
+            }
+    
+            li a:hover {
+                color: #3ca0e7;
+            }
+    
+            li:hover {
+                cursor: pointer;
+            }
+    
+            ul li ul {
+                visibility: hidden;
+                opacity: 0;
+                position: absolute;
+                padding-left: 0;
+                left: 0;
+                display: none;
+                background: white;
+            }
+    
+            ul li:hover>ul,
+            ul li ul:hover {
+                visibility: visible;
+                opacity: 1;
+                display: block;
+                min-width: 250px;
+                text-align: left;
+                padding-top: 20px;
+                box-shadow: 0px 3px 5px -1px #ccc;
+            }
+    
+            ul li ul li {
+                clear: both;
+                width: 100%;
+                text-align: left;
+                margin-bottom: 20px;
+                border-style: none;
+            }
+    
+            ul li ul li a:hover {
+                padding-left: 10px;
+                border-left: 2px solid #3ca0e7;
+                transition: all 0.3s ease;
+            }
+        }
+    }
+    
+    a {
+    
+        text-decoration: none;
+    
+        &:hover {
+            color: #3CA0E7;
+        }
+    
+    }
+    
+    ul li ul li a {
+        transition: all 0.5s ease;
+    }
 
-nav .navigation li{
-    list-style: none; /*Pour ne pas afficher de point*/
-}
 
-nav .navigation li a{
-    display: inline-block;
-    color: blanchedalmond;
-    font-weight: 400;
-    margin-left: 10px;
-    padding: 8px 15px;
-    border-radius: 40px;
-    text-decoration: none;
-    transition: 0.5s ease-in-out;
-}
-
-nav .navigation li a:active,
-nav .navigation li a:hover{
-    background: blanchedalmond;
-    color: black;
-}
-
-.sous-menu{
-    display: none;
-}
-
-nav > ul li:hover .sous-menu{
-    display: block;
-}
-
-nav.sticky{
-    position: fixed;
-    top: 0;
-    left: 0;
-}
+/*Fleche*/
 
 .imgFleche .fleche_haut{
-    position: fixed;
     z-index: 10;
-    max-width: 4%;
+    position: fixed;
     background: transparent;
-    top: 1%;
-    left: 48%;
     opacity: 75%;
+    top: 5px;
+    font-size: 4rem;
+    background-color: saddlebrown;
+    width: 100%;
 } 
+
+.imgFleche .fleche_haut a {
+    justify-content: center;
+    background-color: seagreen;
+    width: 100%;
+    justify-content: center;
+}
 
 .imgFleche .fleche_bas{
     z-index: 10;
     position: fixed;
-    max-width: 4%;
     background: transparent;
-    top: 92%;
-    left: 48%;
     opacity: 75%;
+    bottom: 5px;
+    font-size: 4rem;
+    left: 50%;
+    width: 100%;
 }
 
 
 /*Texts*/
 
-.text-boite a span{
+/*.text-boite a span{
     width: 0;
     height: 100%;
     background: blue;
@@ -127,7 +179,7 @@ nav.sticky{
 
 .text-boite a:hover{
     color: blanchedalmond;
-}
+}*/
 
 
 /*Accueil*/
@@ -135,7 +187,7 @@ nav.sticky{
 .accueil{
     min-height: 100vh;
     background-color: rgb(51, 51, 53);
-    padding-top: 80px;
+    /*padding-top: 80px;*/
     position: relative;
     width: 100%;
     display: flex;
@@ -179,66 +231,13 @@ nav.sticky{
 }
 
 
-/* Slide */
-
-.slider .slick-slide{
-    height:auto!important;
-}
-
-.slick-arrow:before{
-    content:""!important;
-    width: 100%!important;
-    height: 100%!important;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.slick-next:before{
-    background: url(./image/fleche_droite.png)!important;
-    background-size: contain!important;
-}
-
-.slick-prev:before{
-    background: url(./image/fleche_gauche.png)!important;
-    background-size: contain!important;
-}
-
-.slick-next{ 
-    right:1%!important;
-}
-
-.slick-prev{ 
-    left:1%!important; 
-}
-
-.slick-arrow{
-    z-index:2!important;
-    width:50px!important;
-    height:50px!important;
-}
-
-.slick-dots li button:before {
-    background-color: blanchedalmond;
-    height: 100%;
-    width: 100%;
-    text-indent: -9999px;
-    }
-
-.slick-dots{
-    /*bottom: initial!important;*/
-    background-color: rgb(51, 51, 53) !important;
-    padding-top: 5px !important;
-    top: 95% !important;
-    padding-bottom: 70px !important;
-}
-
 
 /* Contenu */
 
 .projets{
     height: 100%;
     width: 100%;
+    z-index: 1;
     background-color: rgb(51, 51, 53);
 }
 
@@ -267,7 +266,7 @@ nav.sticky{
     align-items: center;
 }
 
-.jeu .text-boite a{
+/*.jeu .text-boite a{
     position: absolute;
     padding: 10px 20px;
     margin: 30px 0;
@@ -279,7 +278,7 @@ nav.sticky{
     border-radius: 10px;
     text-decoration: none;
     transition: 0.6s ease-in-out;
-}    
+}   */ 
 
 .jeu .text-boite h2{
     color: blanchedalmond;
@@ -293,9 +292,9 @@ nav.sticky{
     font-size: 25px;
 }
 
-.jeu .text-boite .btn{
+/*.jeu .text-boite .btn{
     position: absolute;
-}
+}*/
 
 .jeu .imgboite{
     position: relative;
@@ -361,7 +360,7 @@ nav.sticky{
     flex-basis: 48%;
 }
 
-.aPropos .text-boite a{
+/*.aPropos .text-boite a{
     position: absolute;
     padding: 10px 20px;
     margin: 30px 0;
@@ -373,7 +372,7 @@ nav.sticky{
     border-radius: 10px;
     text-decoration: none;
     transition: 0.6s ease-in-out;
-}    
+}    */
 
 .aPropos .text-boite h2{
     color: blanchedalmond;
@@ -413,6 +412,7 @@ nav.sticky{
     text-align: center;
     align-items: center;
     flex-wrap: wrap;
+    z-index: 1;
 }
 
 .contacts .text-boite{
@@ -458,6 +458,18 @@ nav.sticky{
 .contacts .imgboite img{
     margin-left: 10px;
     max-width: 3%;
+}
+
+.contactLinks{
+    display: flex;
+    font-size: 2rem;
+    color: blanchedalmond;
+    justify-content: center;
+    gap: 10px;
+}
+
+.contactLinks i{
+    cursor: pointer; /* Montre que c'est cliquable */
 }
 
 

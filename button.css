@@ -1,0 +1,61 @@
+@import "bourbon";
+
+* {
+	-webkit-transition-property: all;
+	-webkit-transition-duration: .2s;
+  -moz-transition-timing-function: cubic-bezier(100,50,21,6);
+	-moz-transition-property: all;
+	-moz-transition-duration: .2s;
+  -moz-transition-timing-function: cubic-bezier(100,50,21,6);
+}
+h1{  font-family: 'Oswald', sans-serif;
+  color:rgb(51, 51, 53);
+}
+body {
+  background-color: rgb(51, 51, 53);
+  padding-top: 70px;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  font-weight:100;
+}
+
+
+.btn-discover {
+  position: relative;
+  display: inline-block;
+  width: 166px;
+  height: 45px;
+  font-size: 12px;
+  line-height: 45px;
+  text-align: center;
+  text-transform: uppercase;
+  color: blanchedalmond;
+  cursor: pointer;
+  overflow: hidden;
+  text-decoration: none;
+  z-index: 1;
+}
+.btn-discover svg {
+  position: absolute;
+  top: 0; left: 0;
+}
+.btn-discover svg rect {
+  fill: none;
+  stroke: blanchedalmond;
+  stroke-width: 1;
+  stroke-dasharray: 422, 0;
+  
+  @include transition(all 1300ms $ease-out-expo);
+}
+.btn-discover:hover svg rect {
+  stroke-width: 5;
+  stroke-dasharray: 10, 310;
+  stroke-dashoffset: 33;
+}
+
+.btn-discover:hover {
+  color:blanchedalmond;
+  font-size:18px;
+  letter-spacing:1px;
+  font-weight:bold;
+}

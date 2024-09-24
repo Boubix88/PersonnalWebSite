@@ -21,10 +21,10 @@ window.onscroll = function(){
         navbar.classList.remove("sticky");
     }
 
-	setBtnStyle(window, accueil, btnAccueil);
+	/*setBtnStyle(window, accueil, btnAccueil);
 	setBtnStyle(window, projets, btnProjets);
 	setBtnStyle(window, aPropos, btnAPropos);
-	setBtnStyle(window, contacts, btnContacts);
+	setBtnStyle(window, contacts, btnContacts);*/
 
     if (window.pageYOffset >= accueil.offsetTop && window.pageYOffset < (accueil.offsetTop + accueil.offsetHeight)){
         position = "Accueil";
@@ -120,11 +120,24 @@ function applyBtnStyleOver(id){
 function applyBtnStyleOut(id){
     document.getElementById(id).style = "background: transparent; color: blanchedalmond;";
 }
+/* Listener de boutons dans contacts */
+document.querySelector('#linkedin-icon').addEventListener('click', function() {
+    window.open('https://www.linkedin.com/in/sandy-gehin-2aa5b0257', '_blank');
+});
 
-$('.projets').slick({
+document.querySelector('#github-icon').addEventListener('click', function() {
+    window.open('https://github.com/Boubix88', '_blank');
+});
+
+document.querySelector('#gitlab-icon').addEventListener('click', function() {
+    window.open('https://gitlab.univ-lorraine.fr/gehin94u', '_blank');
+});
+
+
+/*$('.projets').slick({
     dots: true,
     arrows: true,
     autoplay: true,
     infinite: true,
     autoplaySpeed: 4000
-});
+});*/
