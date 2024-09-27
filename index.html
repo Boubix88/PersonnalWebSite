@@ -9,6 +9,8 @@
 
     <link href='https://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' type='text/css'> <!-- Css des boutons -->
     <link href='button.css' rel='stylesheet' type='text/css'> <!-- Css des boutons -->
+    <link href="donut.css" rel="stylesheet" type="text/css"> <!-- Css des donuts -->
+    <link href="skillbox.css" rel="stylesheet" type="text/css"> <!-- Css des skills -->
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -19,23 +21,22 @@
 </head>
 <body>
         
-        <div class="header">
-
-            <nav role="navigation" class="primary-navigation">
+        <div class="header" id="bandeau">
+            <nav role="navigation" class="primary-navigation" id="navigation">
                 <a href="#" class="logo">Sandy Gehin</a>
                 <ul>
-                    <li><a href="#">Accueil</a></li>
-                    <li><a href="#">Projets &dtrif;</a>
+                    <li><a href="#" id="boutonAccueil">Accueil</a></li>
+                    <li><a href="#" id="boutonProjets">Projets &dtrif;</a>
                         <ul class="dropdown">
                             <li><a href="#projetsEtu">Projets étudiant</a></li>
                             <li><a href="#projetsPerso">Projets personnels</a></li>
                         </ul>
                     </li>
-                    <li><a href="#aPropos">A propos</a></li>
-                    <li><a href="#contacts">Contact</a></li>
+                    <li><a href="#competences" id="boutonCompetences">Compétences</a></li>
+                    <li><a href="#aPropos" id="boutonAPropos">A propos</a></li>
+                    <li><a href="#contacts" id="boutonContacts">Contact</a></li>
                 </ul>
             </nav>
-
         </div>
 
         <div id="accueil" class="accueil">
@@ -57,96 +58,212 @@
                         aria-label="Slide 3"></button>
                     <button type="button" data-bs-target="#carousselProjetsEtu" data-bs-slide-to="3"
                         aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carousselProjetsEtu" data-bs-slide-to="4"
+                        aria-label="Slide 5"></button>
+                    <button type="button" data-bs-target="#carousselProjetsEtu" data-bs-slide-to="5"
+                        aria-label="Slide 6"></button>
+                    <button type="button" data-bs-target="#carousselProjetsEtu" data-bs-slide-to="6"
+                        aria-label="Slide 7"></button>
+                    <button type="button" data-bs-target="#carousselProjetsEtu" data-bs-slide-to="7"
+                        aria-label="Slide 8"></button>
                 </div>
-                <div class="carousel-inner">
+
+                <!-- Carousel inner -->
+                <div class="carousel-inner reveal">
                     <div class="carousel-item active">
-                        <div id="jeu" class="jeu">
-                            <div class="text-boite">
-                                <h2>Jeu 3D</h2>
-                                <p>Prison Survival, un jeu 2D donnant une illusion de 3D grâce à la technique du Raycasting. Un jeu
-                                    concu entierement en C,
-                                    utilisant comme librairie graphique la SDL2.</p>
-                                <br>
-                                <a href="https://github.com/Boubix88/Projet_S3" target="_blank" class="btn-discover">
-                                    <svg>
-                                        <rect x="0" y="0" fill="none" width="166" height="45" />
-                                    </svg>
-                                    Découvrir&nbsp;<i class="bi bi-box-arrow-up-right"></i>
-                                </a>
-                            </div>
-                            <div class="imgboite">
-                                <img src="./image/jeu.png" alt="" class="imgJeu">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-4 d-flex flex-column justify-content-center text-boite">
+                                    <h2>Les bonnes routes</h2>
+                                    <p>LBR est un site de covoiturage, ce projet a été réalisé en groupe de 11 personnes. Le travail a été effectué 
+                                        sous forme de sprint. Le site est conçu en HTML, CSS, Javascript, Html, utilise une base de données MySql et aussi
+                                        une API pour les mail et une autre pour la géolocalisation/carte GPS. D'autrs outils on été utilisé comme flask
+                                        ou encore Bootstrap                                    
+                                    </p>
+                                    <a href="https://github.com/ElDjeee/Les-Bonnes-Routes" target="_blank" class="btn-discover">
+                                        <svg>
+                                            <rect x="0" y="0" fill="none" width="166" height="45" />
+                                        </svg>
+                                        Découvrir&nbsp;<i class="bi bi-box-arrow-up-right"></i>
+                                    </a>
+                                </div>
+                                <div class="col-8" class="img-fluid w-100">
+                                    <img src="./image/lbr.jpg" alt="Jeu 3D" class="img-horizontale">
+                                </div>
                             </div>
                         </div>
                     </div>
+                    
+                    <!-- Fourth project -->
                     <div class="carousel-item">
-                        <div id="siteCocktails" class="jeu">
-                            <div class="text-boite">
-                                <h2>Site de cocktails</h2>
-                                <p>Cocktails, c'est un site web ou l'on retrouve une multitude de cocktails ainsi que leur recette.
-                                    On a la possibilité d'ajouter un cocktails
-                                    à son panier. Ce site est conçu en PHP, Html, JavaScript et utilise une base de données MySql.
-                                </p>
-                                <br>
-                                <a href="https://cocktails2.000webhostapp.com/" target="_blank" class="btn-discover">
-                                    <svg>
-                                        <rect x="0" y="0" fill="none" width="166" height="45" />
-                                    </svg>
-                                    Découvrir&nbsp;<i class="bi bi-box-arrow-up-right"></i>
-                                </a>
-                            </div>
-                            <div class="imgBoite">
-                                <img src="./image/site_cocktails.png" alt="" class="imgJeu">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="text-boite">
+                                        <h2>Feuille de calcul - Node.js</h2>
+                                        <p>ThreeSheets est un projet de feuille de calcul en ligne, permettant de créer, modifier et partager des feuilles de calculs.
+                                            Ce projet est conçu en Node.js, Express, EJS, MySQL, Socket.io.</p>
+                                        <a href=""
+                                            target="_blank" class="btn-discover">
+                                            <svg>
+                                                <rect x="0" y="0" fill="none" width="166" height="45" />
+                                            </svg>
+                                            Découvrir&nbsp;<i class="bi bi-box-arrow-up-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-8">
+                                    <img src="./image/threeSheets.jpg" alt="Feuille de calcul" class="img-fluid w-100 img-horizontale">
+                                </div>
                             </div>
                         </div>
                     </div>
+
+                    <!-- Second project -->
                     <div class="carousel-item">
-                        <div id="jeuEte" class="jeu">
-                            <div class="text-boite">
-                                <h2>Jeu 2D</h2>
-                                <p>ETE (Epopée des terres étherées) est un jeu PC ou l'on incarne un personnage dans un monde ou l'on doit éliminer des ennemis.
-                                    Ce jeu est conçu en JAVA et utilise la librairie graphique TiledMap, ce projet a été réalisé en groupe de 4.
-                                </p>
-                                <br>
-                                <a href="https://github.com/Onin88/ACL_Game_2D_ETE" target="_blank" class="btn-discover">
-                                    <svg>
-                                        <rect x="0" y="0" fill="none" width="166" height="45" />
-                                    </svg>
-                                    Découvrir&nbsp;<i class="bi bi-box-arrow-up-right"></i>
-                                </a>
-                            </div>
-                            <div class="imgBoite">
-                                <img src="./image/ete_1.png" alt="" class="imgJeu">
-                                <img src="./image/ete_2.png" alt="" class="imgJeu">
-                                <img src="./image/ete_3.png" alt="" class="imgJeu">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item"></div>
-                        <div id="threeSheets" class="jeu">
-                            <div class="text-boite">
-                                <h2>Feuille de calcul - Node.js</h2>
-                                <p>ThreeSheets est un projet de feuille de calcul en ligne, permettant de créer, modifier et partager des feuilles de calculs.
-                                    Ce projet est conçu en Node.js, Express, EJS, MySQL, Socket.io.
-                                </p>
-                            </div>
-                            <div class="imgBoite">
-                                <img src="./image/threeSheets.jpg" alt="" class="imgJeu">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="text-boite">
+                                        <h2>Site de cocktails</h2>
+                                        <p>Cocktails, c'est un site web où l'on retrouve une multitude de cocktails ainsi que leur recette.
+                                            On a la possibilité d'ajouter un cocktail à son panier. Ce site est conçu en PHP, Html,
+                                            JavaScript et utilise une base de données MySql.</p>
+                                        <a href="https://cocktails2.000webhostapp.com/" target="_blank" class="btn-discover">
+                                            <svg>
+                                                <rect x="0" y="0" fill="none" width="166" height="45" />
+                                            </svg>
+                                            Découvrir&nbsp;<i class="bi bi-box-arrow-up-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-8">
+                                    <img src="./image/site_cocktails.png" alt="Site Cocktails" class="img-fluid w-100 img-horizontale">
+                                </div>
                             </div>
                         </div>
                     </div>
+
+                    <div class="carousel-item">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="text-boite">
+                                        <h2>HabitatRA - Android</h2>
+                                        <p>HabitatRA est une application mobile qui permet de representer une habitation virtuelement
+                                            et de pouvoir s'y déplacer. Ce projet a été réalisé seul, l'application est conçu en JAVA.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-8 d-flex justify-content-center align-items-center">
+                                    <div class="d-flex justify-content-center align-items-center w-100">
+                                        <div class="d-flex flex-row g-0">
+                                            <img src="./image/habitatRA.jpg" alt="HabitatRA" class="img-fluid me-2 img-verticale">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-4 d-flex flex-column justify-content-center text-boite">
+                                    <h2>Arezzo</h2>
+                                    <p>Arezzo est une application PC de composition musicale, le projet a été réalisé en JAVA avec la librairie JavaFX.</p>
+                                </div>
+                                <div class="col-8" class="img-fluid w-100">
+                                    <img src="./image/arezzo.jpg" alt="Jeu 3D" class="img-horizontale">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-4 d-flex flex-column justify-content-center text-boite">
+                                    <h2>Twisk</h2>
+                                    <p>Twisk est une application PC pour la gestion de file d'attente pour une/plusieurs activité(s), 
+                                        le projet a été réalisé en JAVA avec la librairie JavaFX.</p>
+                                </div>
+                                <div class="col-8" class="img-fluid w-100">
+                                    <img src="./image/twisk.jpg" alt="Jeu 3D" class="img-horizontale">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- First project (active) -->
+                    <div class="carousel-item">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-4 d-flex flex-column justify-content-center text-boite">
+                                    <h2>Jeu 3D</h2>
+                                    <p>Prison Survival, un jeu 2D donnant une illusion de 3D grâce à la technique du Raycasting. Un jeu
+                                        conçu entièrement en C, utilisant comme librairie graphique la SDL2.</p>
+                                    <a href="https://github.com/Boubix88/Projet_S3" target="_blank" class="btn-discover">
+                                        <svg>
+                                            <rect x="0" y="0" fill="none" width="166" height="45" />
+                                        </svg>
+                                        Découvrir&nbsp;<i class="bi bi-box-arrow-up-right"></i>
+                                    </a>
+                                </div>
+                                <div class="col-8" class="img-fluid w-100">
+                                    <img src="./image/jeu.png" alt="Jeu 3D" class="img-horizontale">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Third project -->
+                    <div class="carousel-item">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="text-boite">
+                                        <h2>Jeu 2D</h2>
+                                        <p>ETE (Epopée des terres éthérées) est un jeu PC où l'on incarne un personnage dans un monde où l'on doit éliminer des ennemis.
+                                            Ce jeu est conçu en JAVA et utilise la librairie graphique TiledMap, ce projet a été réalisé en groupe de 4.</p>
+                                        <a href="https://github.com/Onin88/ACL_Game_2D_ETE" target="_blank" class="btn-discover">
+                                            <svg>
+                                                <rect x="0" y="0" fill="none" width="166" height="45" />
+                                            </svg>
+                                            Découvrir&nbsp;<i class="bi bi-box-arrow-up-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-8 d-flex justify-content-between">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col">
+                                                <img src="./image/ete_1.png" alt="Jeu 2D" class="img-fluid w-100">
+                                            </div>
+                                            <!--<div class="col">
+                                                <img src="./image/ete_2.png" alt="Jeu 2D" class="img-fluid w-100">
+                                            </div>-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
+
+                
                 <button class="carousel-control-prev" type="button" data-bs-target="#carousselProjetsEtu"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carousselProjetsEtu"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousselProjetsEtu"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
 
         </div>
 
@@ -163,91 +280,371 @@
                         aria-label="Slide 3"></button>
                     <button type="button" data-bs-target="#carousselProjetsPerso" data-bs-slide-to="3"
                         aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carousselProjetsPerso" data-bs-slide-to="4"
+                        aria-label="Slide 5"></button>
                 </div>
-                <div class="carousel-inner">
+
+                <div class="carousel-inner reveal">
+
                     <div class="carousel-item active">
-                        <div id="arduino" class="jeu">
-                            <div class="text-boite">
-                                <h2>Télémetrie Arduino</h2>
-                                <p>Un système de télémetrie conçu à l'aide d'un arduino nano, un systeme permettant de récuperer toutes sortes d'informations, 
-                                    tels que la température de l'arduino, la température du moteur, la vitesse de rotation du moteur, la vitesse du vehicule. 
-                                    Tout ceci étant envoyé grace à un emmeteur sur bande FM à un second arduino nano affichant ces donées sur un mini ecran oled à l'aide 
-                                    de la bibliothèque graphique U8G2.
-                                </p>
-                                <br>
-                                <a href="https://github.com/Boubix88/Arduino_Telemtrie_Trophy_Truck_RC" target="_blank" class="btn-discover">
-                                    <svg>
-                                        <rect x="0" y="0" fill="none" width="166" height="45" />
-                                    </svg>
-                                    Découvrir&nbsp;<i class="bi bi-box-arrow-up-right"></i>
-                                </a>
-                            </div>
-                            <div class="imgboite">
-                                <img src="./image/arduino.png" alt="" class="imgArduino">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="text-boite">
+                                        <h2>Demo 3D - Three.js</h2>
+                                        <p>Voici une démo de ce qui est possible avec Three.js</p>
+                                    </div>
+                                </div>
+                                <div class="col-8">
+                                    <video width="100%" controls>
+                                        <source src="video/threejs.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                     <div class="carousel-item">
-                        <div id="jeuAndroid" class="jeu">
-                            <div class="text-boite">
-                                <h2>Jeu Android</h2>
-                                <p>Android Clicker, un ensemble de mini jeux conçus pour la plateforme Android dans le but d'en aprendre plus sur le développement mobile</p>
-                                <br>
-                                <a href="https://github.com/Boubix88/Android_Clicker" target="_blank" class="btn-discover">
-                                    <svg>
-                                        <rect x="0" y="0" fill="none" width="166" height="45" />
-                                    </svg>
-                                    Découvrir&nbsp;<i class="bi bi-box-arrow-up-right"></i>
-                                </a>
-                            </div>
-                            <div class="imgboiteAndroid">
-                                <img src="./image/jeu_tel_1.jpg" alt="" class="imgJeuAndroid">
-                                <img src="./image/jeu_tel_2.jpg" alt="" class="imgJeuAndroid">
-                                <img src="./image/jeu_tel_3.jpg" alt="" class="imgJeuAndroid">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="text-boite">
+                                        <h2>Application Meccanocar - Android</h2>
+                                        <p>Application Android non oficielle pour la societé Meccanocar</p>
+                                        <a href="https://github.com/Boubix88/Meccanocar" target="_blank" class="btn-discover">
+                                            <svg>
+                                                <rect x="0" y="0" fill="none" width="166" height="45" />
+                                            </svg>
+                                            Découvrir&nbsp;<i class="bi bi-box-arrow-up-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-8 d-flex justify-content-center align-items-center">
+                                    <div class="d-flex justify-content-center align-items-center w-100">
+                                        <div class="d-flex flex-row g-0">
+                                            <img src="./image/meccanocar_1.jpg" alt="Application Meccanocar" class="img-fluid me-2 img-verticale">
+                                            <img src="./image/meccanocar_2.jpg" alt="Application Meccanocar" class="img-fluid ms-2 img-verticale">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                     <div class="carousel-item">
-                        <div id="appliMeccanocar" class="jeu">
-                            <div class="text-boite">
-                                <h2>Application Meccanocar - Android</h2>
-                                <p>Application Android non oficielle pour la societé Meccanocar</p>
-                            </div>
-                            <div class="imgboiteAndroid">
-                                <img src="./image/meccanocar_1.jpg" alt="" class="imgJeuAndroid">
-                                <img src="./image/meccanocar_2.jpg" alt="" class="imgJeuAndroid">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="text-boite">
+                                        <h2>Jeu Android</h2>
+                                        <p>Android Clicker, un ensemble de mini jeux conçus pour la plateforme Android dans le but d'en aprendre plus sur le développement mobile</p>
+                                        <a href="https://github.com/Boubix88/Android_Clicker" target="_blank" class="btn-discover">
+                                            <svg>
+                                                <rect x="0" y="0" fill="none" width="166" height="45" />
+                                            </svg>
+                                            Découvrir&nbsp;<i class="bi bi-box-arrow-up-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-8 d-flex justify-content-center align-items-center">
+                                    <div class="d-flex justify-content-center align-items-center w-100">
+                                        <div class="d-flex flex-row g-0">
+                                            <img src="./image/jeu_tel_1.jpg" alt="Jeu Android" class="img-fluid me-2 img-verticale">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item"></div>
-                        <div id="threeJs" class="jeu">
-                            <div class="text-boite">
-                                <h2>Demo 3D - Three.js</h2>
-                                <p>Voici une démo de ce qui est possible avec Three.js</p>
+
+                    <div class="carousel-item">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="text-boite">
+                                        <h2>StreamDeck DIY - Arduino - Python</h2>
+                                        <p>Voici la fabrication d'un StreamDeck DIY utilisant un arduino nano et la communication serial via
+                                            une application python faite maison, l'application est conçu en python avec la librairie Tkinter et
+                                            permet d'attribuer le lancement d'applications à certaines touches et le contôle de leds RGB.</p>
+                                        </p>
+                                        <a href="https://github.com/Boubix88/DIY-StreamDeck" target="_blank" class="btn-discover">
+                                            <svg>
+                                                <rect x="0" y="0" fill="none" width="166" height="45" />
+                                            </svg>
+                                            Découvrir&nbsp;<i class="bi bi-box-arrow-up-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-8 d-flex justify-content-between">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col">
+                                                <!--<img src="./image/streamdeck.jpg" alt="StreamDeck" class="img-fluid w-100">-->
+                                                <img src="./image/streamdeck_py.png" alt="StreamDeck" class="img-fluid w-100">
+                                            </div>
+       
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="imgboiteAndroid">
-                                <!-- Ici afficher la vidéo -->
-                                <video width="100%" controls>
-                                    <source src="video/threejs.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-4 d-flex flex-column justify-content-center text-boite">
+                                    <h2>Télémetrie Arduino</h2>
+                                    <p>Un système de télémetrie conçu à l'aide d'un arduino nano, un systeme permettant de récuperer toutes sortes d'informations, 
+                                        tels que la température de l'arduino, la température du moteur, la vitesse de rotation du moteur, la vitesse du vehicule. 
+                                        Tout ceci étant envoyé grace à un emmeteur sur bande FM à un second arduino nano affichant ces donées sur un mini ecran oled à l'aide 
+                                        de la bibliothèque graphique U8G2.
+                                    </p>
+                                    <a href="https://github.com/Boubix88/Arduino_Telemtrie_Trophy_Truck_RC" target="_blank" class="btn-discover">
+                                        <svg>
+                                            <rect x="0" y="0" fill="none" width="166" height="45" />
+                                        </svg>
+                                        Découvrir&nbsp;<i class="bi bi-box-arrow-up-right"></i>
+                                    </a>
+                                </div>
+                                <div class="col-8" class="img-fluid w-100">
+                                    <img src="./image/arduino.png" alt="Télémetrie Arduino" class="img-horizontale">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                
                 <button class="carousel-control-prev" type="button" data-bs-target="#carousselProjetsPerso"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carousselProjetsPerso"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousselProjetsPerso"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
 
         </div>
+
+        <div id="competences" class="competences">
+            <div class="text-boite reveal">
+                <h2>Compétences</h2>
+                <!--<div class="chart-container">
+                    <canvas id="html-css-chart" width="200" height="200"></canvas>
+                    <p>HTML & CSS - 70%</p>
+                </div>
+                <div class="chart-container">
+                    <canvas id="javascript-chart" width="200" height="200"></canvas>
+                    <p>JavaScript - 80%</p>
+                </div>
+                <div class="chart-container">
+                    <canvas id="python-chart" width="200" height="200"></canvas>
+                    <p>Python - 90%</p>
+                </div>-->
+                <div class="container-fluid" style="width: 80vw;">
+                    <div class="row">
+                        <div class="col" style="display: flex; align-items: center;">
+                            <p>Maitrise de language</p>
+                        </div>
+                        <div class="col">
+                            <div class="donut" style="--first: .80; --second: .20">
+                                <div class="donut__slice donut__slice__first"></div>
+                                <div class="donut__slice donut__slice__second"></div>
+                                <div class="donut__label">
+                                    <div class="donut__label__heading">
+                                        HTML & CSS
+                                    </div>
+                                    <div class="donut__label__sub">
+                                        Dev Web
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="donut" style="--first: .75; --second: .25">
+                                <div class="donut__slice donut__slice__first"></div>
+                                <div class="donut__slice donut__slice__second"></div>
+                                <div class="donut__label">
+                                    <div class="donut__label__heading">
+                                        JavaScript
+                                    </div>
+                                    <div class="donut__label__sub">
+                                        Dev Web
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="donut" style="--first: .70; --second: .30">
+                                <div class="donut__slice donut__slice__first"></div>
+                                <div class="donut__slice donut__slice__second"></div>
+                                <div class="donut__label">
+                                    <div class="donut__label__heading">
+                                        Python
+                                    </div>
+                                    <div class="donut__label__sub">
+                                        Dev Logiciel
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="donut" style="--first: .85; --second: .15">
+                                <div class="donut__slice donut__slice__first"></div>
+                                <div class="donut__slice donut__slice__second"></div>
+                                <div class="donut__label">
+                                    <div class="donut__label__heading">
+                                        Java
+                                    </div>
+                                    <div class="donut__label__sub">
+                                        Dev Logiciel
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="donut" style="--first: .70; --second: .30">
+                                <div class="donut__slice donut__slice__first"></div>
+                                <div class="donut__slice donut__slice__second"></div>
+                                <div class="donut__label">
+                                    <div class="donut__label__heading">
+                                        C/C++
+                                    </div>
+                                    <div class="donut__label__sub">
+                                        Dev Logiciel
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ajouter un espace pour séparer les deux sections -->
+                    <hr style="margin: 50px 0; border-top: 2px solid blanchedalmond;">
+
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="center-skillbox">
+                                <h1>Maitrise d'IDE</h1>
+                                <div class="skillbox">
+                                    <p>Visual Studio Code</p>
+                                    <p>85%</p>
+                                    <div class="skill">
+                                        <div class="skill-level" style="width: 85%;"></div>
+                                    </div>
+                                </div>
+                                <div class="skillbox">
+                                    <p>Inteliji</p>
+                                    <p>75%</p>
+                                    <div class="skill">
+                                        <div class="skill-level" style="width: 75%;"></div>
+                                    </div>
+                                </div>
+                                <div class="skillbox">
+                                    <p>Android Studio</p>
+                                    <p>75%</p>
+                                    <div class="skill">
+                                        <div class="skill-level" style="width: 75%;"></div>
+                                    </div>
+                                </div>
+                                <div class="skillbox">
+                                    <p>Arduino IDE</p>
+                                    <p>90%</p>
+                                    <div class="skill">
+                                        <div class="skill-level" style="width: 90%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col">
+                            <div class="center-skillbox">
+                                <h1>Bureautique</h1>
+                                <div class="skillbox">
+                                    <p>Microsoft Word/Google Docs</p>
+                                    <p>85%</p>
+                                    <div class="skill">
+                                        <div class="skill-level" style="width: 85%;"></div>
+                                    </div>
+                                </div>
+                                <div class="skillbox">
+                                    <p>Microsoft Excel/Google Sheets</p>
+                                    <p>75%</p>
+                                    <div class="skill">
+                                        <div class="skill-level" style="width: 75%;"></div>
+                                    </div>
+                                </div>
+                                <div class="skillbox">
+                                    <p>Microsoft Powerpoint/Google Slides</p>
+                                    <p>90%</p>
+                                    <div class="skill">
+                                        <div class="skill-level" style="width: 90%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="center-skillbox">
+                                <h1>Graphisme</h1>
+                                <div class="skillbox">
+                                    <p>Photoshop</p>
+                                    <p>60%</p>
+                                    <div class="skill">
+                                        <div class="skill-level" style="width: 60%;"></div>
+                                    </div>
+                                </div>
+                                <div class="skillbox">
+                                    <p>Gimp</p>
+                                    <p>70%</p>
+                                    <div class="skill">
+                                        <div class="skill-level" style="width: 70%;"></div>
+                                    </div>
+                                </div>
+                                <div class="skillbox">
+                                    <p>Figma</p>
+                                    <p>85%</p>
+                                    <div class="skill">
+                                        <div class="skill-level" style="width: 85%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="center-skillbox">
+                                <h1>CAO</h1>
+                                <div class="skillbox">
+                                    <p>Autodesk Fusion 360</p>
+                                    <p>65%</p>
+                                    <div class="skill">
+                                        <div class="skill-level" style="width: 65%;"></div>
+                                    </div>
+                                </div>
+                                <div class="skillbox">
+                                    <p>Sketchup</p>
+                                    <p>70%</p>
+                                    <div class="skill">
+                                        <div class="skill-level" style="width: 70%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
 
         <div id="aPropos" class="aPropos">
             <div class="imgboite reveal">
@@ -274,48 +671,13 @@
                 <h2>Contacts</h2>
                 <p>E-mail : sandygehin2@gmail.com</br>Tel : 07.50.01.87.20</p>
                 <div class="contactLinks">
-                    <!--<a href="www.linkedin.com/in/sandy-gehin-2aa5b0257" target="_blank" title="Website name" class="bi bi-linkedin"></a>
-                    <a href="https://github.com/Boubix88" target="_blank" class="bi bi-github"></a>
-                    <a href="https://gitlab.univ-lorraine.fr/gehin94u" target="_blank" class="bi bi-gitlab"></a>-->
                     <i class="bi bi-linkedin" id="linkedin-icon"></i>
                     <i class="bi bi-github" id="github-icon"></i>
                     <i class="bi bi-gitlab" id="gitlab-icon"></i>
                 </div>
-                
-                
-                <div class="contactLinks">
-                    <!--<a href="www.linkedin.com/in/sandy-gehin-2aa5b0257" target="_blank" class="contactLink">
-                        <i class="bi bi-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/Boubix88" target="_blank" class="contactLink">
-                        <i class="bi bi-github"></i>
-                    </a>
-                    <a href="https://gitlab.univ-lorraine.fr/gehin94u" target="_blank" class="contactLink">
-                        <i class="bi bi-gitlab"></i>
-                    </a>-->
-                </div>
             </div>
-            <!--<div class="imgboite reveal">
-                <a href="https://m.facebook.com/sandy.gehin?eav=AfaWi63x3NXoKFZhsgDk01sPSbzabNmqF7FbBzenR_ni79FwRgfsPUDvVjxUl6qhgX8&paipv=0" target="_blank">
-                    <img src="./image/logo_fb.webp" alt="facebook" class="imgContacts">
-                </a>
-                <a href="https://twitter.com/GehinSandy" target="_blank">
-                    <img src="./image/logo_twitter.png" alt="twitter" class="imgContacts">
-                </a>
-                <a href="https://www.instagram.com/sandy.ghn/" target="_blank">
-                    <img src="./image/logo_insta.webp" alt="instagram" class="imgContacts">
-                </a>
-                <a href="https://github.com/Boubix88" target="_blank">
-                    <img src="./image/logo_github.png" alt="github" class="imgContacts">
-                </a>
-                <a href="https://gitlab.univ-lorraine.fr/gehin94u" target="_blank">
-                    <img src="./image/logo_gitlab.png" alt="gitlab" class="imgContacts">
-                </a>
-                <a href="www.linkedin.com/in/sandy-gehin-2aa5b0257" target="_blank">
-                    <img src="./image/logo_in.png" alt="linkedin" class="imgContacts">
-                </a>
-            </div>-->
         </div>
+
 
         <div class="imgFleche">
             <div class="fleche_haut">
@@ -335,6 +697,7 @@
 
         <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <!--<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>-->
         <script type="text/javascript" src="fonctions.js"></script>
 
