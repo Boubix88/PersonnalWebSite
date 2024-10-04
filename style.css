@@ -1,130 +1,126 @@
-*{
+* {
     padding: 0;
     margin: 0;
+}
+
+body,
+html {
+    padding: 0 !important;
+    margin: 0 !important;
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-.header{
-    position: fixed; 
+.header {
+    position: fixed;
     z-index: 1;
-    top: 0;
     left: 0;
     width: 100%;
     box-shadow: 0px 5px 1px rgba(0, 0, 0, 0.584);
     /*background-color: rgb(51, 51, 53); /* Obligé sinon survol marche pas */
 }
 
-.primary-navigation {
-    background-color: rgb(30, 30, 31) !important;
-}
-
-
 nav {
     &.primary-navigation {
-            padding: 10px;
-            display: flex;
-            justify-content: space-between;
-            /* Ajouté pour espacer le logo et la navigation */
-            align-items: center;
-            /* Pour centrer verticalement */
-            text-align: right;
-            font-size: 16px;
-            /*background-color: aqua;*/
-            background-color: rgb(51, 51, 53);
-    
-    
-            ul li {
-                list-style: none;
-                margin: 0 auto;
-                border-left: 2px solid #3ca0e7;
-                display: inline-block;
-                padding: 0 20px;
-                position: relative;
-                text-decoration: none;
-                text-align: center;
-                font-family: arvo;
-            }
-    
-            .logo {
-                /* Logo Sandy Gehin */
-                font-weight: 600;
-                text-decoration: none;
-                color: blanchedalmond;
-                font-size: 2em;
-            }
-    
-            li a {
-                color: blanchedalmond;
-                text-decoration: none;
-            }
-    
-            li a:hover {
-                color: #3ca0e7 !important;
-            }
-    
-            li:hover {
-                cursor: pointer;
-            }
-    
-            ul li ul {
-                visibility: hidden;
-                opacity: 0;
-                position: absolute;
-                padding-left: 0;
-                left: 0;
-                display: none;
-                background: rgb(30, 30, 31);
-            }
-    
-            ul li:hover>ul,
-            ul li ul:hover {
-                visibility: visible;
-                opacity: 1;
-                display: block;
-                min-width: 250px;
-                text-align: left;
-                padding-top: 20px;
-                box-shadow: 0px 3px 5px -1px blanchedalmond;
-            }
-    
-            ul li ul li {
-                clear: both;
-                width: 100%;
-                text-align: left;
-                margin-bottom: 20px;
-                border-style: none;
-            }
-    
-            ul li ul li a:hover {
-                padding-left: 10px;
-                border-left: 2px solid #3ca0e7;
-                transition: all 0.3s ease;
-            }
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        /* Ajouté pour espacer le logo et la navigation */
+        align-items: center;
+        /* Pour centrer verticalement */
+        text-align: right;
+        font-size: 16px;
+        /*background-color: aqua;*/
+        background-color: rgb(30, 30, 31);
+
+
+        ul li {
+            list-style: none;
+            margin: 0 auto;
+            border-left: 2px solid #3ca0e7;
+            display: inline-block;
+            padding: 0 20px;
+            position: relative;
+            text-decoration: none;
+            text-align: center;
+            font-family: arvo;
+        }
+
+        .logo {
+            /* Logo Sandy Gehin */
+            font-weight: 600;
+            text-decoration: none;
+            color: blanchedalmond;
+            font-size: 2em;
+        }
+
+        li a {
+            color: blanchedalmond;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            color: #3ca0e7 !important;
+        }
+
+        li:hover {
+            cursor: pointer;
+        }
+
+        ul li ul {
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            padding-left: 0;
+            left: 0;
+            display: none;
+            background: rgb(30, 30, 31);
+        }
+
+        ul li:hover>ul,
+        ul li ul:hover {
+            visibility: visible;
+            opacity: 1;
+            display: block;
+            min-width: 250px;
+            text-align: left;
+            padding-top: 20px;
+            box-shadow: 0px 3px 5px -1px blanchedalmond;
+        }
+
+        ul li ul li {
+            clear: both;
+            width: 100%;
+            text-align: left;
+            margin-bottom: 20px;
+            border-style: none;
+        }
+
+        ul li ul li a:hover {
+            padding-left: 10px;
+            border-left: 2px solid #3ca0e7;
+            transition: all 0.3s ease;
         }
     }
-    
-    a {
-    
-        text-decoration: none;
-    
-        &:hover {
-            color: #3CA0E7;
-        }
-    
+}
+
+a {
+
+    text-decoration: none;
+
+    &:hover {
+        color: #3CA0E7;
     }
-    
-    ul li ul li a {
-        transition: all 0.5s ease;
-    }
+
+}
+
+ul li ul li a {
+    transition: all 0.5s ease;
+}
 
 
 /*Fleche*/
 
-.imgFleche .fleche_haut{
+.imgFleche .fleche_haut {
     position: fixed;
     background: transparent;
     opacity: 75%;
@@ -132,7 +128,7 @@ nav {
     font-size: 3rem;
     left: 49%;
     width: 100%;
-} 
+}
 
 .imgFleche .fleche_haut a {
     justify-content: center;
@@ -140,7 +136,7 @@ nav {
     justify-content: center;
 }
 
-.imgFleche .fleche_bas{
+.imgFleche .fleche_bas {
     /**z-index: 10;*/
     position: fixed;
     background: transparent;
@@ -154,8 +150,8 @@ nav {
 
 /*Accueil*/
 
-.accueil{
-    margin-top: -5px; /* Pour cacher bande blanche */
+.accueil {
+    /*margin-top: -5px; /* Pour cacher bande blanche */
     min-height: 100vh;
     background-color: rgb(51, 51, 53);
     /*padding-top: 80px;*/
@@ -169,13 +165,11 @@ nav {
     scroll-behavior: smooth;
 }
 
-.accueil .text-boite{
-    position: relative;
-    max-width: 1000px;
-    flex-basis: 48%;
+.accueil .text-boite {
+    width: 50%;
 }
 
-.accueil .text-boite a{
+.accueil .text-boite a {
     position: absolute;
     padding: 10px 20px;
     margin: 30px 0;
@@ -187,15 +181,10 @@ nav {
     border-radius: 10px;
     text-decoration: none;
     transition: 0.6s ease-in-out;
-}    
-
-.accueil .text-boite h2{
-    color: blanchedalmond;
-    font-size: 6rem;
-    font-weight: 700;
 }
 
-.accueil .text-boite p{
+
+.accueil .text-boite p {
     color: blanchedalmond;
     margin-top: 20px;
     font-size: 2rem;
@@ -206,49 +195,64 @@ nav {
 /* Contenu */
 
 .projets {
-    min-height: 100vh; /* Hauteur minimale de la section */
-    width: 100%; /* Largeur de la section */
+    min-height: 100vh;
+    /* Hauteur minimale de la section */
+    width: 100%;
+    /* Largeur de la section */
     /*z-index: 999; /* Z-index pour le positionnement */
-    background-color: rgb(51, 51, 53); /* Couleur de fond */
-    display: flex; /* Active le Flexbox */
-    align-items: center; /* Centre verticalement */
-    justify-content: center; /* Centre horizontalement (facultatif) */
+    background-color: rgb(51, 51, 53);
+    /* Couleur de fond */
+    display: flex;
+    /* Active le Flexbox */
+    align-items: center;
+    /* Centre verticalement */
+    justify-content: center;
+    /* Centre horizontalement (facultatif) */
 }
 
 .carousel-inner {
-    min-height: 100vh !important; /* S'assure que le carrousel utilise toute la hauteur du conteneur */
-    min-width: 100vw !important; /* S'assure que le carrousel utilise toute la largeur du conteneur */
-    display: flex !important; /* Active le Flexbox */
-    align-items: center !important; /* Centre verticalement */
+    min-height: 100vh !important;
+    /* S'assure que le carrousel utilise toute la hauteur du conteneur */
+    min-width: 100vw !important;
+    /* S'assure que le carrousel utilise toute la largeur du conteneur */
+    display: flex !important;
+    /* Active le Flexbox */
+    align-items: center !important;
+    /* Centre verticalement */
 }
 
 
 /* Contenu carousel */
 
 .col-4 {
-    padding-left: 0 !important; /* Ajustez selon la distance souhaitée par rapport à la flèche */
+    padding-left: 0 !important;
+    /* Ajustez selon la distance souhaitée par rapport à la flèche */
 }
 
 .img-horizontale {
-    width: 100%;  /* Prend toute la largeur de col-8 */
-    height: auto; /* Respecte le ratio d'aspect */
+    width: 100%;
+    /* Prend toute la largeur de col-8 */
+    height: auto;
+    /* Respecte le ratio d'aspect */
     box-shadow: 0px 10px 10px black;
 }
 
 .img-verticale {
-    width: auto;  /* Prend toute la largeur de col-4 */
-    max-height: 50vh; /* Respecte le ratio d'aspect */
+    width: auto;
+    /* Prend toute la largeur de col-4 */
+    max-height: 50vh;
+    /* Respecte le ratio d'aspect */
     box-shadow: 0px 10px 10px black;
     border-radius: 10px;
 }
 
-.text-boite h2{
+.text-boite h2 {
     color: blanchedalmond;
     font-size: 4rem;
     font-weight: 700;
 }
 
-.text-boite p{
+.text-boite p {
     color: blanchedalmond;
     margin-top: 20px;
     font-size: 25px;
@@ -256,8 +260,8 @@ nav {
 
 
 /* Compétences */
-.competences{
-    min-height: 100vh;
+.competences {
+    min-height: 130vh;
     background-color: rgb(51, 51, 53);
     position: relative;
     width: 100%;
@@ -267,6 +271,11 @@ nav {
     align-items: center;
     flex-wrap: wrap;
     scroll-behavior: smooth;
+}
+
+.maitrise-language-text {
+    display: flex;
+    align-items: center;
 }
 
 .chart-container {
@@ -283,7 +292,7 @@ canvas {
 
 /*A propos*/
 
-.aPropos{
+.aPropos {
     min-height: 100vh;
     background-color: rgb(51, 51, 53);
     padding-top: 80px;
@@ -297,7 +306,7 @@ canvas {
     scroll-behavior: smooth;
 }
 
-.aPropos .text-boite{
+.aPropos .text-boite {
     position: relative;
     max-width: 1000px;
     flex-basis: 48%;
@@ -317,19 +326,13 @@ canvas {
     transition: 0.6s ease-in-out;
 }    */
 
-.aPropos .text-boite h2{
-    color: blanchedalmond;
-    font-size: 6rem;
-    font-weight: 700;
-}
-
-.aPropos .text-boite p{
+.aPropos .text-boite p {
     color: blanchedalmond;
     margin-top: 20px;
     font-size: 2rem;
 }
 
-.aPropos .imgboite{
+.aPropos .imgboite {
     position: relative;
     width: 100%;
     height: 100%;
@@ -337,14 +340,28 @@ canvas {
     max-width: 20%;
 }
 
-.aPropos .imgboite img{
+.aPropos .imgboite img {
     max-width: 100%;
+}
+
+.btn-cv {
+    text-decoration: none !important;
+    color: rgb(51, 51, 53);
+    background-color: blanchedalmond;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+}
+
+.btn-cv:hover {
+    background-color: blanchedalmond;
+    color: rgb(51, 51, 53);
 }
 
 
 /*Contacts*/
 
-.contacts{
+.contacts {
     min-height: 100vh;
     background-color: rgb(51, 51, 53);
     padding-top: 80px;
@@ -358,13 +375,13 @@ canvas {
     /*z-index: 1;*/
 }
 
-.contacts .text-boite{
+.contacts .text-boite {
     position: relative;
     max-width: 1000px;
     flex-basis: 48%;
 }
 
-.contacts .text-boite a{
+.contacts .text-boite a {
     position: absolute;
     padding: 10px 20px;
     margin: 30px 0;
@@ -376,21 +393,15 @@ canvas {
     border-radius: 10px;
     text-decoration: none;
     transition: 0.6s ease-in-out;
-}    
-
-.contacts .text-boite h2{
-    color: blanchedalmond;
-    font-size: 6rem;
-    font-weight: 700;
 }
 
-.contacts .text-boite p{
+.contacts .text-boite p {
     color: blanchedalmond;
     margin-top: 20px;
     font-size: 2rem;
 }
 
-.contacts .imgboite{
+.contacts .imgboite {
     position: absolute;
     /*z-index: 2;*/
     width: 100%;
@@ -398,12 +409,12 @@ canvas {
     flex-basis: 48%;
 }
 
-.contacts .imgboite img{
+.contacts .imgboite img {
     margin-left: 10px;
     max-width: 3%;
 }
 
-.contactLinks{
+.contactLinks {
     display: flex;
     font-size: 2rem;
     color: blanchedalmond;
@@ -411,21 +422,22 @@ canvas {
     gap: 10px;
 }
 
-.contactLinks i{
-    cursor: pointer; /* Montre que c'est cliquable */
+.contactLinks i {
+    cursor: pointer;
+    /* Montre que c'est cliquable */
 }
 
 
 /*Transition*/
 
-.reveal{
+.reveal {
     position: relative;
     transform: translateY(150px);
     opacity: 0;
     transition: 1s all ease;
-  }
-  
-.reveal.active{
+}
+
+.reveal.active {
     transform: translateY(0);
     opacity: 1;
-  }
+}

@@ -1,3 +1,39 @@
+/* Styles pour tablettes */
+@media only screen and (max-device-width: 1080px) {
+  /* Cacher le menu normal pour mobile */
+  .donut {
+    --donut-size: 170px !important;
+    --donut-border-width: 12px !important;
+    margin-bottom: 50px !important;
+  }
+
+  .donut__label__heading {
+    font-size: 1.5em !important;
+  }
+
+  .donut__label__sub {
+    font-size: 1em !important;
+  }
+}
+
+/* Styles pour les téléphones */
+@media only screen and (max-device-width: 480px) {
+  /* Cacher le menu normal pour mobile */
+  .donut {
+    --donut-size: 120px !important;
+    --donut-border-width: 8px !important;
+    margin-bottom: 50px !important;
+  }
+
+  .donut__label__heading {
+    font-size: 1em !important;
+  }
+
+  .donut__label__sub {
+    font-size: 0.8em !important;
+  }
+}
+
 .donut {
     --donut-size: 170px;
     --donut-border-width: 20px;

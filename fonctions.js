@@ -164,69 +164,29 @@ document.querySelector('#gitlab-icon').addEventListener('click', function() {
 });
 
 
-/* Partie compétences => Chart.js */
-    // Configuration pour le diagramme HTML & CSS
-var ctxHtmlCss = document.getElementById('html-css-chart').getContext('2d');
-var htmlCssChart = new Chart(ctxHtmlCss, {
-    type: 'doughnut',
-    data: {
-        labels: ['Compétence', 'Reste'],
-        datasets: [{
-            data: [70, 30], // 70% de compétence
-            backgroundColor: ['#FF6384', '#DDDDDD'], // Couleurs
-            hoverBackgroundColor: ['#FF6384', '#DDDDDD']
-        }]
-    },
-    options: {
-        cutoutPercentage: 80, // Épaisseur de l'anneau
-        rotation: Math.PI / -2, // Rotation pour commencer à 12h
-        tooltips: { enabled: false }, // Désactiver les infobulles
+/* Listener de boutons dans projets */
+
+function openMenu() {
+    console.log("Menu ouvert");
+    const navigation = document.getElementById('menu-list');
+    //navigation.classList.toggle('open');
+    navigation.style.right = "0";
+}
+
+function closeMenu() {
+    console.log("Menu fermé");
+    const navigation = document.getElementById('menu-list');
+    //navigation.classList.remove('open');
+    navigation.style.right = "-100%";
+}
+
+// On ferme le menu si on clique en dehors du menu
+window.addEventListener('click', function(event) {
+    console.log("Click", event.target.id);
+
+    // Vérifier que l'élément cliqué n'est pas le menu ou le bouton du menu ou le bouton projets ou un de ses fils
+    if (event.target.id !== "menu-list" && event.target.id !== 'menu-btn' && (event.target.id !== 'boutonProjets' && !btnProjets.contains(event.target))) {
+        const navigation = document.getElementById('menu-list');
+        navigation.style.right = "-100%";
     }
 });
-
-// Configuration pour le diagramme JavaScript
-var ctxJavascript = document.getElementById('javascript-chart').getContext('2d');
-var javascriptChart = new Chart(ctxJavascript, {
-    type: 'doughnut',
-    data: {
-        labels: ['Compétence', 'Reste'],
-        datasets: [{
-            data: [80, 20], // 80% de compétence
-            backgroundColor: ['#36A2EB', '#DDDDDD'],
-            hoverBackgroundColor: ['#36A2EB', '#DDDDDD']
-        }]
-    },
-    options: {
-        cutoutPercentage: 80,
-        rotation: Math.PI / -2,
-        tooltips: { enabled: false },
-    }
-});
-
-// Configuration pour le diagramme Python
-var ctxPython = document.getElementById('python-chart').getContext('2d');
-var pythonChart = new Chart(ctxPython, {
-    type: 'doughnut',
-    data: {
-        labels: ['Compétence', 'Reste'],
-        datasets: [{
-            data: [90, 10], // 90% de compétence
-            backgroundColor: ['#FFCE56', '#DDDDDD'],
-            hoverBackgroundColor: ['#FFCE56', '#DDDDDD']
-        }]
-    },
-    options: {
-        cutoutPercentage: 80,
-        rotation: Math.PI / -2,
-        tooltips: { enabled: false },
-    }
-});
-
-
-/*$('.projets').slick({
-    dots: true,
-    arrows: true,
-    autoplay: true,
-    infinite: true,
-    autoplaySpeed: 4000
-});*/

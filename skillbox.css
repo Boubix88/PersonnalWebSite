@@ -36,19 +36,21 @@
     font-family: bold;
     /*Letter-spacing: 1px;*/
     font-size: 20px;
+    display: flex; /* Utilise flexbox */
+    justify-content: space-between; /* Espace entre les éléments */
+    align-items: center; /* Centre les éléments verticalement */
 }
 
 .skillbox p:nth-child(1) {
-    /*fLoat: left;*/
     position: relative;
-    top: 5px;
 }
 
 .skillbox p:nth-child(2) {
     fLoat: right;
     position: relative;
-    top: -35px;
+    top: -40px;
 }
+
 
 .skill {
     background: #262626;
@@ -64,3 +66,44 @@
     height: 10px;
 }
 
+/* Styles pour tablettes */
+@media only screen and (max-device-width: 1080px) {
+
+    .center-skillbox {
+        width: 300px !important;
+        max-width: 300px !important;
+    }
+
+    .skillbox p:nth-child(1), .skillbox p:nth-child(2) {
+        font-size: 2em !important;
+    }
+
+    .skillbox p:nth-child(2) {
+        /*top: -20px !important;
+        left: 90% !important;*/
+        display: none !important;
+    }
+}
+
+/* Styles pour les téléphones */
+@media only screen and (max-device-width: 480px) {
+
+    .center-skillbox {
+        width: 200px !important;
+        max-width: 200px !important;
+    }
+
+    .center-skillbox h1 {
+        font-size: 1em !important;
+    }
+
+    .skillbox p:nth-child(1), .skillbox p:nth-child(2) {
+        font-size: 1em !important;
+    }
+
+    .skillbox p:nth-child(2) {
+        /*top: -20px !important;
+        left: 90% !important;*/
+        display: none !important;
+    }
+}
